@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Événements — Institut des Marges Sahariennes (IMS)</title>
+<meta name="description" content="Séminaires, restitutions et cycles de formation courts organisés par l'Institut des Marges Sahariennes."/>
+<link rel="stylesheet" href="assets/css/style.css"/>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
+</head>
+<body data-page="evenements">
+<a class="skip-link" href="#main">Aller au contenu principal</a>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>Institut de recherche indépendant — Sahel · Lac Tchad · Sahara</span>
+    <div class="topbar-links">
+      <a href="recherche.html">Rechercher</a>
+      <a href="tel:+33609704977">+33 6 09 70 49 77</a>
+      <a href="soutien-contact.html">Soutien / Contact</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-mark">IMS</div>
+      <div>
+        <div class="logo-text-name">Institut des Marges<br>Sahariennes</div>
+        <div class="logo-text-tag">Think tank indépendant</div>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="a-propos.html" data-nav="apropos">À propos</a>
+      <a href="publications.html" data-nav="publications">Publications</a>
+      <a href="decryptages.html" data-nav="decryptages">Décryptages</a>
+      <a href="cartographie.html" data-nav="cartographie">Cartographie</a>
+      <a href="evenements.html" data-nav="evenements">Événements</a>
+      <a href="soutien-contact.html" class="nav-cta" data-nav="soutien">Soutien / Contact</a>
+    </nav>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> / Événements</div>
+      <h1>Événements</h1>
+      <p>L'Institut propose trois formats de rencontre. Le calendrier public est en cours de constitution.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="grid grid-3" id="formatsGrid"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap" style="max-width:640px;">
+      <span class="eyebrow">Programme</span>
+      <h2 class="title mb-2">Aucun événement public n'est encore programmé</h2>
+      <p class="lead" style="margin-bottom:1.5rem;">Le calendrier 2026-2027 est en cours de constitution. Laissez vos coordonnées pour être informé·e des prochains séminaires, restitutions et formations, ou pour proposer un sujet.</p>
+
+      <form id="interestForm" novalidate>
+        <div class="form-grid">
+          <div class="field" data-field="name">
+            <label for="evName">Nom complet</label>
+            <input type="text" id="evName" required/>
+            <div class="field-error">Merci d'indiquer votre nom.</div>
+          </div>
+          <div class="field" data-field="email">
+            <label for="evEmail">Adresse e-mail</label>
+            <input type="email" id="evEmail" required/>
+            <div class="field-error">Merci d'indiquer une adresse e-mail valide.</div>
+          </div>
+          <div class="field">
+            <label for="evFormat">Format qui vous intéresse</label>
+            <select id="evFormat">
+              <option>Séminaires</option>
+              <option>Restitutions</option>
+              <option>Cycles de formation courts</option>
+              <option>Les trois</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block mt-2">Être informé·e</button>
+        <div class="form-success" id="interestSuccess">Merci, votre intérêt a bien été enregistré. Nous vous contacterons dès qu'un événement sera programmé.</div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <div class="logo-text-name" style="color:#fff">Institut des Marges Sahariennes</div>
+        <p>Centre de recherche indépendant sur les régimes politiques, la sécurité régionale et l'économie politique des ressources — Sahel, Lac Tchad, Sahara.</p>
+        <p style="margin-top:.5rem;">15 Boulevard Gutenberg, 93190 Livry-Gargan, France<br>+33 6 09 70 49 77</p>
+      </div>
+      <div>
+        <h4>Institut</h4>
+        <a href="a-propos.html">À propos</a>
+        <a href="a-propos.html#equipe">Équipe & gouvernance</a>
+        <a href="soutien-contact.html">Soutien / Contact</a>
+      </div>
+      <div>
+        <h4>Recherche</h4>
+        <a href="publications.html">Publications</a>
+        <a href="decryptages.html">Décryptages</a>
+        <a href="cartographie.html">Cartographie</a>
+      </div>
+      <div>
+        <h4>Suivre l'Institut</h4>
+        <a href="evenements.html">Événements</a>
+        <a href="soutien-contact.html#newsletter">Newsletter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="currentYear"></span> Institut des Marges Sahariennes — association loi 1901. Tous droits réservés.</span>
+      <span><a href="mentions-legales.html" style="color:#7f8fb0;">Mentions légales & confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  const formatsGrid = qs("#formatsGrid");
+  IMS_DATA.eventFormats.forEach(f => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<div class="card-body"><h3>${escapeHtml(f.title)}</h3><p>${escapeHtml(f.description)}</p></div>`;
+    formatsGrid.appendChild(card);
+  });
+
+  const form = qs("#interestForm");
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    let ok = true;
+    const nameField = qs("[data-field='name']", form);
+    if (!validateField(nameField, v => v.length > 1)) ok = false;
+    const emailField = qs("[data-field='email']", form);
+    if (!validateField(emailField, v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v))) ok = false;
+    if (!ok) return;
+
+    const list = JSON.parse(localStorage.getItem("ims_event_interest") || "[]");
+    list.push({ email: qs("#evEmail").value.trim().toLowerCase(), format: qs("#evFormat").value });
+    localStorage.setItem("ims_event_interest", JSON.stringify(list));
+
+    form.reset();
+    qs("#interestSuccess").classList.add("show");
+    showToast("Votre intérêt a bien été enregistré.");
+  });
+</script>
+</body>
+</html>

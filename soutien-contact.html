@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Soutien / Contact — Institut des Marges Sahariennes (IMS)</title>
+<meta name="description" content="Adhésion institutionnelle, mécénat, prestations sur mesure et newsletter de l'Institut des Marges Sahariennes."/>
+<link rel="stylesheet" href="assets/css/style.css"/>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
+</head>
+<body data-page="soutien">
+<a class="skip-link" href="#main">Aller au contenu principal</a>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>Institut de recherche indépendant — Sahel · Lac Tchad · Sahara</span>
+    <div class="topbar-links">
+      <a href="recherche.html">Rechercher</a>
+      <a href="tel:+33609704977">+33 6 09 70 49 77</a>
+      <a href="soutien-contact.html">Soutien / Contact</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-mark">IMS</div>
+      <div>
+        <div class="logo-text-name">Institut des Marges<br>Sahariennes</div>
+        <div class="logo-text-tag">Think tank indépendant</div>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="a-propos.html" data-nav="apropos">À propos</a>
+      <a href="publications.html" data-nav="publications">Publications</a>
+      <a href="decryptages.html" data-nav="decryptages">Décryptages</a>
+      <a href="cartographie.html" data-nav="cartographie">Cartographie</a>
+      <a href="evenements.html" data-nav="evenements">Événements</a>
+      <a href="soutien-contact.html" class="nav-cta" data-nav="soutien">Soutien / Contact</a>
+    </nav>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> / Soutien / Contact</div>
+      <h1>Soutien & contact</h1>
+      <p>Adhésion institutionnelle, mécénat, prestations sur mesure ou simple prise de contact — voici comment vous engager avec l'Institut.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow">Comment nous engager</span>
+      <h2 class="title mb-2">Cinq façons de travailler avec l'Institut</h2>
+      <div class="grid grid-3" id="segmentsGrid"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <span class="eyebrow">Deux structures, deux façons de soutenir</span>
+      <h2 class="title mb-2">Adhésion, mécénat et prestations</h2>
+      <div class="grid grid-2">
+        <div class="card"><div class="card-body">
+          <h3>Soutenir l'association</h3>
+          <p>L'Institut des Marges Sahariennes (association loi 1901) accueille adhésions institutionnelles et mécénat pour financer ses publications en accès libre et ses travaux de recherche indépendants.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h3>Commander une prestation</h3>
+          <p>IMS Advisory (SASU, structure adossée) facture les notes confidentielles, briefings et missions sur mesure pour les organisations qui en font la demande.</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="newsletter">
+    <div class="wrap" style="max-width:640px;">
+      <span class="eyebrow">Newsletter</span>
+      <h2 class="title mb-2">Suivre les publications de l'Institut</h2>
+      <p class="lead" style="margin-bottom:1.5rem;">Une notification à chaque nouvelle note de conjoncture, rapport ou décryptage publié — sans spam, désabonnement en un clic.</p>
+
+      <form id="newsletterForm" name="newsletter-ims" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="newsletter-ims"/>
+        <p hidden><label>Ne pas remplir : <input name="bot-field"/></label></p>
+        <div class="form-grid">
+          <div class="field">
+            <label for="nlEmail">Adresse e-mail</label>
+            <input type="email" id="nlEmail" name="email" required placeholder="vous@exemple.com"/>
+            <div class="field-error">Merci d'indiquer une adresse e-mail valide.</div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block mt-2">S'abonner</button>
+        <div class="form-success" id="newsletterSuccess">Inscription confirmée ! Vous serez averti·e à chaque nouvelle parution de l'Institut.</div>
+      </form>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap" style="display:grid; grid-template-columns:1.2fr .8fr; gap:3rem;">
+
+      <div>
+        <span class="eyebrow">Contact</span>
+        <h2 class="title mb-2">Nous écrire</h2>
+        <form id="contactForm" name="contact-ims" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="contact-ims"/>
+          <p hidden><label>Ne pas remplir : <input name="bot-field"/></label></p>
+          <div class="form-grid">
+            <div class="field" data-field="name">
+              <label for="cName">Nom complet</label>
+              <input type="text" id="cName" name="name" required/>
+              <div class="field-error">Merci d'indiquer votre nom.</div>
+            </div>
+            <div class="field" data-field="email">
+              <label for="cEmail">Adresse e-mail</label>
+              <input type="email" id="cEmail" name="email" required/>
+              <div class="field-error">Merci d'indiquer une adresse e-mail valide.</div>
+            </div>
+            <div class="field">
+              <label for="cSubject">Sujet</label>
+              <select id="cSubject" name="subject">
+                <option>Adhésion institutionnelle</option>
+                <option>Mécénat</option>
+                <option>Prestation sur mesure (IMS Advisory)</option>
+                <option>Presse</option>
+                <option>Partenariat académique</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="field" data-field="message">
+              <label for="cMessage">Message</label>
+              <textarea id="cMessage" name="message" required></textarea>
+              <div class="field-error">Votre message doit contenir au moins 10 caractères.</div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block mt-2">Envoyer le message</button>
+          <div class="form-success" id="contactSuccess">Merci, votre message a bien été transmis à l'Institut. Nous vous répondrons sous quelques jours ouvrés.</div>
+        </form>
+      </div>
+
+      <div>
+        <div class="card">
+          <div class="card-body">
+            <h3>Coordonnées</h3>
+            <p style="margin-top:.75rem;">Institut des Marges Sahariennes<br>Association loi 1901</p>
+            <p style="margin-top:.75rem;">📍 15 Boulevard Gutenberg<br>93190 Livry-Gargan, France</p>
+            <p style="margin-top:.75rem;">📞 <a href="tel:+33609704977" style="color:var(--terracotta); font-weight:700;">+33 6 09 70 49 77</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <div class="logo-text-name" style="color:#fff">Institut des Marges Sahariennes</div>
+        <p>Centre de recherche indépendant sur les régimes politiques, la sécurité régionale et l'économie politique des ressources — Sahel, Lac Tchad, Sahara.</p>
+        <p style="margin-top:.5rem;">15 Boulevard Gutenberg, 93190 Livry-Gargan, France<br>+33 6 09 70 49 77</p>
+      </div>
+      <div>
+        <h4>Institut</h4>
+        <a href="a-propos.html">À propos</a>
+        <a href="a-propos.html#equipe">Équipe & gouvernance</a>
+        <a href="soutien-contact.html">Soutien / Contact</a>
+      </div>
+      <div>
+        <h4>Recherche</h4>
+        <a href="publications.html">Publications</a>
+        <a href="decryptages.html">Décryptages</a>
+        <a href="cartographie.html">Cartographie</a>
+      </div>
+      <div>
+        <h4>Suivre l'Institut</h4>
+        <a href="evenements.html">Événements</a>
+        <a href="soutien-contact.html#newsletter">Newsletter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="currentYear"></span> Institut des Marges Sahariennes — association loi 1901. Tous droits réservés.</span>
+      <span><a href="mentions-legales.html" style="color:#7f8fb0;">Mentions légales & confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  const segGrid = qs("#segmentsGrid");
+  IMS_DATA.segments.forEach(s => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <div class="card-body">
+        <h3>${escapeHtml(s.title)}</h3>
+        <p class="card-meta" style="margin:.5rem 0;">${escapeHtml(s.examples)}</p>
+        <p>${escapeHtml(s.offer)}</p>
+      </div>`;
+    segGrid.appendChild(card);
+  });
+
+  initNewsletterForm("#newsletterForm", "#newsletterSuccess");
+  initContactForm("#contactForm", "#contactSuccess");
+</script>
+</body>
+</html>

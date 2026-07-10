@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://institut-marges-sahariennes.netlify.app/sitemap.xml

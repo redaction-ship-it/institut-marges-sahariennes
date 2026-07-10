@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Publications — Institut des Marges Sahariennes (IMS)</title>
+<meta name="description" content="Notes de conjoncture, rapports et working papers de l'Institut des Marges Sahariennes sur le Sahel, le Lac Tchad et le Sahara."/>
+<link rel="stylesheet" href="assets/css/style.css"/>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
+</head>
+<body data-page="publications">
+<a class="skip-link" href="#main">Aller au contenu principal</a>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>Institut de recherche indépendant — Sahel · Lac Tchad · Sahara</span>
+    <div class="topbar-links">
+      <a href="recherche.html">Rechercher</a>
+      <a href="tel:+33609704977">+33 6 09 70 49 77</a>
+      <a href="soutien-contact.html">Soutien / Contact</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-mark">IMS</div>
+      <div>
+        <div class="logo-text-name">Institut des Marges<br>Sahariennes</div>
+        <div class="logo-text-tag">Think tank indépendant</div>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="a-propos.html" data-nav="apropos">À propos</a>
+      <a href="publications.html" data-nav="publications">Publications</a>
+      <a href="decryptages.html" data-nav="decryptages">Décryptages</a>
+      <a href="cartographie.html" data-nav="cartographie">Cartographie</a>
+      <a href="evenements.html" data-nav="evenements">Événements</a>
+      <a href="soutien-contact.html" class="nav-cta" data-nav="soutien">Soutien / Contact</a>
+    </nav>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> / Publications</div>
+      <h1>Publications</h1>
+      <p>Notes de conjoncture (4-6 p., rythme bimensuel), rapports (30-80 p., deux par an) et working papers académiques — la collection <strong>Cahiers du Tibesti</strong>, en accès libre.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+
+      <div class="filterbar">
+        <input type="search" id="pubSearch" placeholder="Rechercher une publication, un mot-clé…"/>
+        <select id="pubType">
+          <option value="">Tous les formats</option>
+        </select>
+      </div>
+
+      <div class="filter-chips mb-2" id="pubChips"></div>
+
+      <div class="result-count" id="pubCount"></div>
+      <div class="grid grid-3" id="pubGrid"></div>
+      <div class="empty-state" id="pubEmpty" style="display:none;">
+        <p>Aucune publication ne correspond à votre recherche. Essayez d'autres mots-clés ou réinitialisez les filtres.</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <div class="logo-text-name" style="color:#fff">Institut des Marges Sahariennes</div>
+        <p>Centre de recherche indépendant sur les régimes politiques, la sécurité régionale et l'économie politique des ressources — Sahel, Lac Tchad, Sahara.</p>
+        <p style="margin-top:.5rem;">15 Boulevard Gutenberg, 93190 Livry-Gargan, France<br>+33 6 09 70 49 77</p>
+      </div>
+      <div>
+        <h4>Institut</h4>
+        <a href="a-propos.html">À propos</a>
+        <a href="a-propos.html#equipe">Équipe & gouvernance</a>
+        <a href="soutien-contact.html">Soutien / Contact</a>
+      </div>
+      <div>
+        <h4>Recherche</h4>
+        <a href="publications.html">Publications</a>
+        <a href="decryptages.html">Décryptages</a>
+        <a href="cartographie.html">Cartographie</a>
+      </div>
+      <div>
+        <h4>Suivre l'Institut</h4>
+        <a href="evenements.html">Événements</a>
+        <a href="soutien-contact.html#newsletter">Newsletter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="currentYear"></span> Institut des Marges Sahariennes — association loi 1901. Tous droits réservés.</span>
+      <span><a href="mentions-legales.html" style="color:#7f8fb0;">Mentions légales & confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Modale détail publication -->
+<div class="modal-overlay" id="pubModal">
+  <div class="modal-box">
+    <button class="modal-close" data-modal-close aria-label="Fermer">✕</button>
+    <div id="pubModalContent"></div>
+  </div>
+</div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  const params = new URLSearchParams(location.search);
+  let activeCat = params.get("cat") || "";
+
+  const typeSelect = qs("#pubType");
+  const chipsEl = qs("#pubChips");
+  const grid = qs("#pubGrid");
+  const countEl = qs("#pubCount");
+  const emptyEl = qs("#pubEmpty");
+  const searchInput = qs("#pubSearch");
+
+  const types = [...new Set(IMS_DATA.publications.map(p => p.type))];
+  types.forEach(t => typeSelect.insertAdjacentHTML("beforeend", `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`));
+
+  function renderChips() {
+    chipsEl.innerHTML = "";
+    const allChip = document.createElement("button");
+    allChip.className = "chip" + (activeCat === "" ? " active" : "");
+    allChip.textContent = "Tous les axes";
+    allChip.addEventListener("click", () => { activeCat = ""; renderChips(); render(); });
+    chipsEl.appendChild(allChip);
+
+    IMS_DATA.categories.forEach(cat => {
+      const chip = document.createElement("button");
+      chip.className = "chip" + (activeCat === cat.id ? " active" : "");
+      chip.textContent = cat.label;
+      chip.addEventListener("click", () => { activeCat = cat.id; renderChips(); render(); });
+      chipsEl.appendChild(chip);
+    });
+  }
+
+  function pubCard(p) {
+    const el = document.createElement("div");
+    el.className = "card";
+    el.id = p.slug;
+    el.innerHTML = `
+      <div class="card-media"><span class="card-tag">${escapeHtml(p.type)}</span></div>
+      <div class="card-body">
+        <div class="card-meta">${catLabel(p.category)} · ${p.pages} p. · à paraître</div>
+        <h3>${escapeHtml(p.title)}</h3>
+        <p>${escapeHtml(p.summary)}</p>
+        <button class="card-link" style="text-align:left;">En savoir plus →</button>
+      </div>`;
+    qs("button", el).addEventListener("click", () => {
+      qs("#pubModalContent").innerHTML = `
+        <span class="eyebrow">${catLabel(p.category)}</span>
+        <h3 style="margin-bottom:.5rem;">${escapeHtml(p.title)}</h3>
+        <div class="card-meta" style="margin-bottom:1rem;">${escapeHtml(p.type)} · ${p.pages} pages · à paraître</div>
+        <p style="color:var(--gray); margin-bottom:1rem;">${escapeHtml(p.summary)}</p>
+        <p style="font-size:.88rem; margin-bottom:1rem;"><strong>Auteur(s) :</strong> ${p.authors.map(escapeHtml).join(", ")}</p>
+        <div class="tag-list mb-2">${p.tags.map(t => `<span class="tag-pill">${escapeHtml(t)}</span>`).join("")}</div>
+        <a href="soutien-contact.html#newsletter" class="btn btn-primary">Être averti·e de la parution</a>`;
+      openModal("pubModal");
+    });
+    return el;
+  }
+
+  function render() {
+    const q = searchInput.value.trim().toLowerCase();
+    const type = typeSelect.value;
+
+    const filtered = IMS_DATA.publications.filter(p => {
+      if (activeCat && p.category !== activeCat) return false;
+      if (type && p.type !== type) return false;
+      if (q) {
+        const haystack = (p.title + " " + p.summary + " " + p.authors.join(" ") + " " + p.tags.join(" ")).toLowerCase();
+        if (!haystack.includes(q)) return false;
+      }
+      return true;
+    });
+
+    grid.innerHTML = "";
+    filtered.forEach(p => grid.appendChild(pubCard(p)));
+
+    countEl.textContent = filtered.length + " publication" + (filtered.length !== 1 ? "s" : "") + " en préparation";
+    emptyEl.style.display = filtered.length ? "none" : "block";
+    grid.style.display = filtered.length ? "grid" : "none";
+  }
+
+  searchInput.addEventListener("input", debounce(render, 200));
+  typeSelect.addEventListener("change", render);
+
+  renderChips();
+  render();
+</script>
+</body>
+</html>

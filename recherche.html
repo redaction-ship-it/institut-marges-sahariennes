@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Recherche — Institut des Marges Sahariennes (IMS)</title>
+<meta name="description" content="Recherchez dans l'ensemble des publications et décryptages de l'Institut des Marges Sahariennes."/>
+<link rel="stylesheet" href="assets/css/style.css"/>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
+</head>
+<body data-page="">
+<a class="skip-link" href="#main">Aller au contenu principal</a>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>Institut de recherche indépendant — Sahel · Lac Tchad · Sahara</span>
+    <div class="topbar-links">
+      <a href="recherche.html">Rechercher</a>
+      <a href="tel:+33609704977">+33 6 09 70 49 77</a>
+      <a href="soutien-contact.html">Soutien / Contact</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-mark">IMS</div>
+      <div>
+        <div class="logo-text-name">Institut des Marges<br>Sahariennes</div>
+        <div class="logo-text-tag">Think tank indépendant</div>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="a-propos.html" data-nav="apropos">À propos</a>
+      <a href="publications.html" data-nav="publications">Publications</a>
+      <a href="decryptages.html" data-nav="decryptages">Décryptages</a>
+      <a href="cartographie.html" data-nav="cartographie">Cartographie</a>
+      <a href="evenements.html" data-nav="evenements">Événements</a>
+      <a href="soutien-contact.html" class="nav-cta" data-nav="soutien">Soutien / Contact</a>
+    </nav>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> / Recherche</div>
+      <h1>Rechercher sur le site</h1>
+      <p>Interrogez l'ensemble des publications et décryptages de l'Institut en une seule recherche.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+
+      <div class="filterbar">
+        <input type="search" id="globalSearch" placeholder="Rechercher un mot-clé, un pays, un acteur, un axe…" autofocus/>
+      </div>
+
+      <div class="filter-chips mb-2" id="typeChips">
+        <button class="chip active" data-type="">Tout</button>
+        <button class="chip" data-type="publication">Publications</button>
+        <button class="chip" data-type="decryptage">Décryptages</button>
+      </div>
+
+      <div class="result-count" id="resCount"></div>
+      <div class="grid grid-3" id="resGrid"></div>
+      <div class="empty-state" id="resEmpty" style="display:none;">
+        <p>Aucun résultat. Essayez un autre mot-clé, un pays (Tchad, Soudan, Libye…) ou un axe de recherche.</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <div class="logo-text-name" style="color:#fff">Institut des Marges Sahariennes</div>
+        <p>Centre de recherche indépendant sur les régimes politiques, la sécurité régionale et l'économie politique des ressources — Sahel, Lac Tchad, Sahara.</p>
+        <p style="margin-top:.5rem;">15 Boulevard Gutenberg, 93190 Livry-Gargan, France<br>+33 6 09 70 49 77</p>
+      </div>
+      <div>
+        <h4>Institut</h4>
+        <a href="a-propos.html">À propos</a>
+        <a href="a-propos.html#equipe">Équipe & gouvernance</a>
+        <a href="soutien-contact.html">Soutien / Contact</a>
+      </div>
+      <div>
+        <h4>Recherche</h4>
+        <a href="publications.html">Publications</a>
+        <a href="decryptages.html">Décryptages</a>
+        <a href="cartographie.html">Cartographie</a>
+      </div>
+      <div>
+        <h4>Suivre l'Institut</h4>
+        <a href="evenements.html">Événements</a>
+        <a href="soutien-contact.html#newsletter">Newsletter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="currentYear"></span> Institut des Marges Sahariennes — association loi 1901. Tous droits réservés.</span>
+      <span><a href="mentions-legales.html" style="color:#7f8fb0;">Mentions légales & confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  const searchInput = qs("#globalSearch");
+  const grid = qs("#resGrid");
+  const countEl = qs("#resCount");
+  const emptyEl = qs("#resEmpty");
+  let activeType = "";
+
+  const params = new URLSearchParams(location.search);
+  if (params.get("q")) searchInput.value = params.get("q");
+
+  qsa("#typeChips .chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      activeType = chip.getAttribute("data-type");
+      qsa("#typeChips .chip").forEach(c => c.classList.remove("active"));
+      chip.classList.add("active");
+      render();
+    });
+  });
+
+  function buildIndex() {
+    const pubs = IMS_DATA.publications.map(p => ({
+      type: "publication",
+      typeLabel: p.type,
+      title: p.title,
+      excerpt: p.summary,
+      category: p.category,
+      haystack: (p.title + " " + p.summary + " " + p.authors.join(" ") + " " + p.tags.join(" ")).toLowerCase(),
+      href: "publications.html#" + p.slug
+    }));
+    const decs = IMS_DATA.decryptages.map(n => ({
+      type: "decryptage",
+      typeLabel: "Décryptage",
+      title: n.title,
+      excerpt: n.excerpt,
+      category: n.category,
+      haystack: (n.title + " " + n.excerpt + " " + n.author).toLowerCase(),
+      href: "article.html?slug=" + n.slug
+    }));
+    return pubs.concat(decs);
+  }
+  const searchIndex = buildIndex();
+
+  function resultCard(item) {
+    const el = document.createElement("a");
+    el.href = item.href;
+    el.className = "card";
+    el.innerHTML = `
+      <div class="card-media"><span class="card-tag">${escapeHtml(item.typeLabel)}</span></div>
+      <div class="card-body">
+        <div class="card-meta">${catLabel(item.category)}</div>
+        <h3>${escapeHtml(item.title)}</h3>
+        <p>${escapeHtml(item.excerpt)}</p>
+        <span class="card-link">En savoir plus →</span>
+      </div>`;
+    return el;
+  }
+
+  function render() {
+    const q = searchInput.value.trim().toLowerCase();
+    const filtered = searchIndex.filter(item => {
+      if (activeType && item.type !== activeType) return false;
+      if (q && !item.haystack.includes(q)) return false;
+      return true;
+    });
+
+    grid.innerHTML = "";
+    filtered.forEach(item => grid.appendChild(resultCard(item)));
+
+    countEl.textContent = q
+      ? filtered.length + " résultat" + (filtered.length !== 1 ? "s" : "") + " pour « " + searchInput.value.trim() + " »"
+      : filtered.length + " élément" + (filtered.length !== 1 ? "s" : "") + " au total";
+    emptyEl.style.display = filtered.length ? "none" : "block";
+    grid.style.display = filtered.length ? "grid" : "none";
+  }
+
+  searchInput.addEventListener("input", debounce(render, 200));
+  render();
+</script>
+</body>
+</html>
