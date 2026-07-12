@@ -174,7 +174,9 @@
     grid.innerHTML = "";
     filtered.forEach(n => grid.appendChild(decCard(n)));
 
-    countEl.textContent = filtered.length + " décryptage" + (filtered.length !== 1 ? "s" : "") + " en préparation";
+    const pubCount = filtered.filter(n => n.status === "published" && n.date).length;
+    const suffix = pubCount ? (pubCount === filtered.length ? "" : " · " + (filtered.length - pubCount) + " à paraître") : " en préparation";
+    countEl.textContent = filtered.length + " décryptage" + (filtered.length !== 1 ? "s" : "") + suffix;
     emptyEl.style.display = filtered.length ? "none" : "block";
     grid.style.display = filtered.length ? "grid" : "none";
   }
