@@ -124,6 +124,30 @@ window.IMS_DATA = {
      invités, sur l'actualité chaude. Calendrier de lancement — à rédiger. */
   decryptages: [
     {
+      slug: "am-dafock-guerre-soudan-rca",
+      title: "Am-Dafock : quand la guerre du Soudan franchit la frontière centrafricaine",
+      category: "securite",
+      status: "published",
+      date: "12 juillet 2026",
+      author: "Tchoudiba Bourdjolbo",
+      excerpt: "Le 30 juin 2026, la coalition ASP a tenu Am-Dafock cinq jours face aux FACA et à leurs alliés russes. Un basculement tactique qui signale l'entrée de la RCA dans l'orbite de la guerre du Soudan.",
+      body: [
+        "<p>Le 30 juin 2026, plus de 700 combattants d'une nouvelle coalition, l'Alliance du sursaut patriotique (ASP), ont pris pied à Am-Dafock, à la frontière soudanaise. Reprise cinq jours plus tard par les Forces armées centrafricaines (FACA) et leurs alliés russes, la localité n'est pas un incident isolé : elle signale l'entrée de la République centrafricaine dans l'orbite de la guerre du Soudan et l'ouverture possible d'un nouveau cycle de conflit armé.</p>",
+        "<h2>Un basculement tactique, pas un simple raid</h2>",
+        "<p>L'offensive contre Am-Dafock, dans la préfecture de la Vakaga, a contraint les FACA et leurs auxiliaires russes au repli vers la base de la MINUSCA, dont l'enceinte a été touchée : trois casques bleus zambiens ont été blessés, l'un grièvement. Le bilan approche la trentaine de morts et plus de 16 000 personnes ont fui vers les campements de déplacés. Les forces gouvernementales n'ont repris la localité que le 5 juillet.</p>",
+        "<p>Le fait marquant n'est pas la reprise, mais la durée de l'occupation. Depuis l'offensive de la Coalition des patriotes pour le changement (CPC) en 2021, les groupes armés opéraient selon une logique de harcèlement, sans jamais tenir un terrain au-delà d'une journée face au contrôle aérien FACA-russe. <strong>Am-Dafock rompt ce schéma.</strong> La coalition dispose de lance-roquettes, de missiles antichars, de drones et de mitrailleuses lourdes capables d'encaisser l'appui aérien. Ce passage d'une guerre de mouvement à une guerre de position est le véritable signal d'alerte.</p>",
+        "<h2>La matrice soudanaise : l'axe Darfour-RSF</h2>",
+        "<p>L'attaque a été lancée depuis le Darfour-Sud, région sous contrôle des Forces de soutien rapide (RSF) d'Hemedti, avec lesquelles plusieurs groupes du nord-est centrafricain, au premier rang desquels le FPRC, entretiennent des liens historiques. La guerre soudanaise a provoqué une circulation accrue d'armes lourdes, de combattants aguerris et de réseaux logistiques à travers des espaces frontaliers faiblement contrôlés.</p>",
+        "<p>Am-Dafock se situe sur le corridor reliant le Darfour aux étendues sahéliennes d'Afrique centrale, un couloir historique pour les rébellions, les trafiquants d'armes et les combattants étrangers. La crise centrafricaine devient ainsi un nœud d'un système régional où s'imbriquent la guerre du Soudan, les recompositions du Sahel et l'affirmation de la Russie en Afrique centrale.</p>",
+        "<h2>Une coalition soudée par le rejet russe et le troisième mandat</h2>",
+        "<p>Créée à la mi-mai 2026, l'ASP rassemble le FPRC de Noureddine Adam (recherché par la CPI), le MDRPC d'Arda Hakouma, le Front commun pour le redressement, des éléments des 3R et le FDLP de Florent Kema, autour de figures de l'ex-Séléka. Deux lignes de force soudent cet attelage hétéroclite : le rejet de la présence militaire russe et l'opposition au troisième mandat du président Faustin-Archange Touadéra, entamé en 2026. Parallèlement, une Coalition centrafricaine pour le redressement (CCR) a menacé, dès le 1er juillet, de marcher sur Bangui.</p>",
+        "<h2>Les lignes de faille : trésorerie, MINUSCA et verrou géographique</h2>",
+        "<p>Le principal talon d'Achille du pouvoir est financier : l'État peine à payer ses propres soldats, ce qui nourrit le risque de défections. L'hypothèse d'un désengagement de l'allié russe pour impayés reste improbable mais non nulle, d'autant que la transition de Wagner vers l'Africa Corps demeure inachevée. Au même moment, la MINUSCA réduit sa présence dans l'arrière-pays. Am-Dafock est un verrou : le perdre durablement ouvrirait un couloir vers Birao, puis vers les axes menant à Bangui. À l'ouest, un second front se dessine, avec un risque sur le corridor Douala-Bangui, artère vitale d'un pays enclavé.</p>",
+        "<h2>Perspectives</h2>",
+        "<p>Trois scénarios se dessinent : un <strong>containment</strong> (le plus probable à court terme), où l'appui russe stabilise la Vakaga et l'ASP revient au harcèlement ; une <strong>escalade</strong> avec ouverture d'un second front à l'ouest ; et, en risque de queue, une <strong>déstabilisation du régime</strong> si crise financière, désengagement russe et pression multi-fronts se conjuguent. À surveiller : la capacité des FACA à tenir Birao, la régularité de la solde, l'effectivité de la force mixte Tchad-RCA, le corridor Douala-Bangui et le calendrier du troisième mandat.</p>"
+      ]
+    },
+    {
       slug: "soudan-rapport-de-force-rsf-saf",
       title: "Soudan : où en est le rapport de force entre RSF et forces armées soudanaises ?",
       category: "securite",
