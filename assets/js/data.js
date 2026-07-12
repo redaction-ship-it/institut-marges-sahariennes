@@ -129,6 +129,7 @@ window.IMS_DATA = {
       category: "securite",
       status: "published",
       date: "12 July 2026",
+      lang: "en",
       author: "Tchoudiba Bourdjolbo",
       excerpt: "On 18 March 2026, a drone strike killed at least seventeen mourners in Tiné, a border town split between Chad and Sudan. Beyond the military incident lies a runaway humanitarian crisis: 1.3 million refugees, a collapsing reception system and a closed border that traps civilians.",
       body: [
