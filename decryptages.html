@@ -152,7 +152,7 @@
     el.innerHTML = `
       <div class="card-media"><span class="card-tag">${catLabel(n.category)}</span></div>
       <div class="card-body">
-        <div class="card-meta">à paraître · ${escapeHtml(n.author)}</div>
+        <div class="card-meta">${n.status === "published" && n.date ? escapeHtml(n.date) : "à paraître"} · ${escapeHtml(n.author)}</div>
         <h3>${escapeHtml(n.title)}</h3>
         <p>${escapeHtml(n.excerpt)}</p>
         <span class="card-link">En savoir plus →</span>

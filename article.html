@@ -120,18 +120,27 @@
     document.title = article.title + " — Institut des Marges Sahariennes";
     qs("#pageTitle").textContent = document.title;
 
-    container.innerHTML = `
-      <span class="eyebrow">${catLabel(article.category)}</span>
-      <h1 style="font-size:2rem; margin-bottom:.75rem;">${escapeHtml(article.title)}</h1>
-      <div class="card-meta" style="margin-bottom:1.5rem;">À paraître · Par ${escapeHtml(article.author)}</div>
-      <p style="font-size:1.05rem; color:#33291d; margin-bottom:1.5rem;">${escapeHtml(article.excerpt)}</p>
-      <div class="card" style="margin-bottom:1.5rem;">
+    const isPublished = article.status === "published" && article.body;
+    const bodyHtml = Array.isArray(article.body) ? article.body.join("") : (article.body || "");
+    const metaLine = isPublished
+      ? `${escapeHtml(article.date || "")} · Par ${escapeHtml(article.author)}`
+      : `À paraître · Par ${escapeHtml(article.author)}`;
+    const mainBlock = isPublished
+      ? `<div class="article-body" style="font-size:1.05rem; line-height:1.75; color:#2a2118;">${bodyHtml}</div>`
+      : `<div class="card" style="margin-bottom:1.5rem;">
         <div class="card-body">
           <p style="color:var(--gray); font-size:.92rem;">Ce décryptage est en cours de rédaction et sera publié prochainement. Laissez votre e-mail pour être averti·e de sa parution.</p>
           <a href="soutien-contact.html#newsletter" class="btn btn-primary mt-2">Être averti·e de la parution</a>
         </div>
-      </div>
-      <div class="flex-between" style="border-top:1px solid var(--border); padding-top:1.25rem;">
+      </div>`;
+
+    container.innerHTML = `
+      <span class="eyebrow">${catLabel(article.category)}</span>
+      <h1 style="font-size:2rem; margin-bottom:.75rem;">${escapeHtml(article.title)}</h1>
+      <div class="card-meta" style="margin-bottom:1.5rem;">${metaLine}</div>
+      <p style="font-size:1.1rem; color:#33291d; margin-bottom:1.5rem; font-style:italic;">${escapeHtml(article.excerpt)}</p>
+      ${mainBlock}
+      <div class="flex-between" style="border-top:1px solid var(--border); padding-top:1.25rem; margin-top:1.5rem;">
         <div class="tag-list"><span class="tag-pill">${escapeHtml(catLabel(article.category))}</span></div>
         <div class="social-share">
           <button type="button" title="Copier le lien" id="shareCopy">🔗</button>
@@ -162,7 +171,7 @@
         el.innerHTML = `
           <div class="card-media"><span class="card-tag">${catLabel(n.category)}</span></div>
           <div class="card-body">
-            <div class="card-meta">à paraître</div>
+            <div class="card-meta">${n.status === "published" && n.date ? escapeHtml(n.date) : "à paraître"}</div>
             <h3>${escapeHtml(n.title)}</h3>
             <p>${escapeHtml(n.excerpt)}</p>
             <span class="card-link">En savoir plus →</span>
