@@ -122,9 +122,10 @@
 
     const isPublished = article.status === "published" && article.body;
     const bodyHtml = Array.isArray(article.body) ? article.body.join("") : (article.body || "");
+    const byWord = article.lang === "en" ? "By" : "Par";
     const metaLine = isPublished
-      ? `${escapeHtml(article.date || "")} · Par ${escapeHtml(article.author)}`
-      : `À paraître · Par ${escapeHtml(article.author)}`;
+      ? `${escapeHtml(article.date || "")} · ${byWord} ${escapeHtml(article.author)}`
+      : `À paraître · ${byWord} ${escapeHtml(article.author)}`;
     const mainBlock = isPublished
       ? `<div class="article-body" style="font-size:1.05rem; line-height:1.75; color:#2a2118;">${bodyHtml}</div>`
       : `<div class="card" style="margin-bottom:1.5rem;">
