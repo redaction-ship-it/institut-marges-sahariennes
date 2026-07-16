@@ -166,6 +166,22 @@
     const el = document.createElement("div");
     el.className = "card";
     el.id = p.slug;
+    if (p.status === "published") {
+      const media = p.cover
+        ? `<div class="card-media" style="background-image:url('${p.cover}');background-size:cover;background-position:center;"><span class="card-tag">${escapeHtml(p.type)}</span></div>`
+        : `<div class="card-media"><span class="card-tag">${escapeHtml(p.type)}</span></div>`;
+      el.innerHTML = `
+        <a href="article.html?slug=${encodeURIComponent(p.slug)}" style="display:block;color:inherit;">
+          ${media}
+          <div class="card-body">
+            <div class="card-meta">${catLabel(p.category)} · ${escapeHtml(p.date || "")}</div>
+            <h3>${escapeHtml(p.title)}</h3>
+            <p>${escapeHtml(p.summary)}</p>
+            <span class="card-link">Lire la note →</span>
+          </div>
+        </a>`;
+      return el;
+    }
     el.innerHTML = `
       <div class="card-media"><span class="card-tag">${escapeHtml(p.type)}</span></div>
       <div class="card-body">
@@ -205,7 +221,7 @@
     grid.innerHTML = "";
     filtered.forEach(p => grid.appendChild(pubCard(p)));
 
-    countEl.textContent = filtered.length + " publication" + (filtered.length !== 1 ? "s" : "") + " en préparation";
+    countEl.textContent = filtered.length + " publication" + (filtered.length !== 1 ? "s" : "");
     emptyEl.style.display = filtered.length ? "none" : "block";
     grid.style.display = filtered.length ? "grid" : "none";
   }

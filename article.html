@@ -58,7 +58,7 @@
 <main id="main">
   <section class="section" id="articleSection">
     <div class="wrap" style="max-width:760px;">
-      <a href="decryptages.html" class="back-link">← Retour aux décryptages</a>
+      <a href="decryptages.html" class="back-link" id="backLink">← Retour aux décryptages</a>
       <div id="articleContent"></div>
     </div>
   </section>
@@ -66,7 +66,7 @@
   <section class="section section-alt" id="relatedSection" style="display:none;">
     <div class="wrap">
       <span class="eyebrow">À lire aussi</span>
-      <h2 class="title mb-2">Autres décryptages du même axe</h2>
+      <h2 class="title mb-2">Autres parutions du même axe</h2>
       <div class="grid grid-3" id="relatedGrid"></div>
     </div>
   </section>
@@ -109,7 +109,12 @@
 <script src="assets/js/main.js"></script>
 <script>
   const slug = new URLSearchParams(location.search).get("slug");
-  const article = IMS_DATA.decryptages.find(n => n.slug === slug);
+  let articleSource = "decryptages";
+  let article = IMS_DATA.decryptages.find(n => n.slug === slug);
+  if (!article) {
+    const pub = IMS_DATA.publications.find(n => n.slug === slug);
+    if (pub) { article = pub; articleSource = "publications"; }
+  }
   const container = qs("#articleContent");
 
   if (!article) {
@@ -120,6 +125,11 @@
     document.title = article.title + " — Institut des Marges Sahariennes";
     qs("#pageTitle").textContent = document.title;
 
+    if (articleSource === "publications") {
+      const bl = qs("#backLink");
+      if (bl) { bl.href = "publications.html"; bl.textContent = "← Retour aux publications"; }
+    }
+    const coverHtml = article.cover ? `<img src="${escapeHtml(article.cover)}" alt="${escapeHtml(article.title)}" style="width:100%;height:auto;border-radius:8px;border:1px solid var(--border);margin:.25rem 0 1.25rem;"/>` : "";
     const isPublished = article.status === "published" && article.body;
     const bodyHtml = Array.isArray(article.body) ? article.body.join("") : (article.body || "");
     const byWord = article.lang === "en" ? "By" : "Par";
@@ -139,6 +149,7 @@
       <span class="eyebrow">${catLabel(article.category)}</span>
       <h1 style="font-size:2rem; margin-bottom:.75rem;">${escapeHtml(article.title)}</h1>
       <div class="card-meta" style="margin-bottom:1.5rem;">${metaLine}</div>
+      ${coverHtml}
       <p style="font-size:1.1rem; color:#33291d; margin-bottom:1.5rem; font-style:italic;">${escapeHtml(article.excerpt)}</p>
       ${mainBlock}
       <div class="flex-between" style="border-top:1px solid var(--border); padding-top:1.25rem; margin-top:1.5rem;">
@@ -161,7 +172,7 @@
       }
     });
 
-    const related = IMS_DATA.decryptages.filter(n => n.category === article.category && n.slug !== article.slug).slice(0, 3);
+    const related = IMS_DATA[articleSource].filter(n => n.category === article.category && n.slug !== article.slug && (articleSource !== "publications" || (n.status === "published" && n.body))).slice(0, 3);
     if (related.length) {
       qs("#relatedSection").style.display = "block";
       const relGrid = qs("#relatedGrid");
