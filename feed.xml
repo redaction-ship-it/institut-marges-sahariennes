@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Institut des Marges Sahariennes (IMS)</title>
+  <link>https://ims-advisory.afripolitique.com/</link>
+  <description>Recherche indépendante sur les régimes politiques, la sécurité régionale et l'économie politique des ressources — Sahel, Lac Tchad, Sahara.</description>
+  <language>fr-fr</language>
+  <atom:link href="https://ims-advisory.afripolitique.com/feed.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>Décryptage stratégique : le risque d'explosion du quadrangle saharien (Libye-Tchad-Soudan-RCA)</title>
+    <link>https://ims-advisory.afripolitique.com/article?slug=quadrangle-saharien-risque-explosion</link>
+    <guid>https://ims-advisory.afripolitique.com/article?slug=quadrangle-saharien-risque-explosion</guid>
+    <pubDate>Wed, 15 Jul 2026 08:00:00 GMT</pubDate>
+    <description>Note d'analyse sur l'embrasement du quadrangle Libye-Tchad-Soudan-RCA : la guerre soudanaise comme accélérateur régional, la prédation des ressources, plus de 15 millions de déplacés, et des leviers d'action pour les bailleurs fondés sur le Triple Nexus.</description>
+  </item>
+  <item>
+    <title>Tiné : la guerre du Soudan déverse sa catastrophe humanitaire sur le Tchad</title>
+    <link>https://ims-advisory.afripolitique.com/article?slug=tine-drone-crise-humanitaire-tchad-soudan</link>
+    <guid>https://ims-advisory.afripolitique.com/article?slug=tine-drone-crise-humanitaire-tchad-soudan</guid>
+    <pubDate>Sun, 12 Jul 2026 08:00:00 GMT</pubDate>
+    <description>Le 18 mars 2026, une frappe de drone a tué au moins dix-sept civils en deuil à Tiné. Derrière l'incident militaire, une crise humanitaire hors de contrôle : 1,3 million de réfugiés et un système d'accueil à l'agonie.</description>
+  </item>
+  <item>
+    <title>Tiné: Sudan's War Spills Its Humanitarian Catastrophe onto Chad</title>
+    <link>https://ims-advisory.afripolitique.com/article?slug=tine-drone-humanitarian-crisis-chad-sudan</link>
+    <guid>https://ims-advisory.afripolitique.com/article?slug=tine-drone-humanitarian-crisis-chad-sudan</guid>
+    <pubDate>Sun, 12 Jul 2026 08:00:00 GMT</pubDate>
+    <description>On 18 March 2026, a drone strike killed at least seventeen mourners in Tiné. Beyond the military incident lies a runaway humanitarian crisis: 1.3 million refugees and a collapsing reception system.</description>
+  </item>
+  <item>
+    <title>Am-Dafock : quand la guerre du Soudan franchit la frontière centrafricaine</title>
+    <link>https://ims-advisory.afripolitique.com/article?slug=am-dafock-guerre-soudan-rca</link>
+    <guid>https://ims-advisory.afripolitique.com/article?slug=am-dafock-guerre-soudan-rca</guid>
+    <pubDate>Sun, 12 Jul 2026 08:00:00 GMT</pubDate>
+    <description>Le 30 juin 2026, la coalition ASP a tenu Am-Dafock cinq jours face aux FACA et à leurs alliés russes. Un basculement qui signale l'entrée de la RCA dans l'orbite de la guerre du Soudan.</description>
+  </item>
+</channel>
+</rss>
