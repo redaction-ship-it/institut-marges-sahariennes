@@ -372,3 +372,40 @@ p.lead { font-size: 1.08rem; color: var(--gray); max-width: 720px; }
   transition: all .3s ease;
 }
 .toast.show { transform: translateY(0); opacity: 1; }
+
+/* ═══════════════════════════════════════
+   AMÉLIORATIONS 2026 — partage, citation, langue, impression
+═══════════════════════════════════════ */
+.social-share { display: flex; gap: .5rem; align-items: center; }
+.share-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--indigo); color: #fff !important; font-size: .85rem; font-weight: 700;
+  transition: background .2s; cursor: pointer; border: none;
+}
+.share-btn:hover { background: var(--terracotta); }
+
+.lang-switch { margin: 0 0 1.25rem; }
+.lang-switch a {
+  display: inline-block; font-size: .82rem; font-weight: 700;
+  border: 1px solid var(--border); border-radius: 999px;
+  padding: .35rem .9rem; background: #fff; color: var(--indigo);
+}
+.lang-switch a:hover { border-color: var(--terracotta); color: var(--terracotta); }
+
+.cite-box {
+  margin-top: 2rem; background: #fff; border: 1px solid var(--border);
+  border-left: 4px solid var(--sand-dark); border-radius: 6px; padding: 1.1rem 1.3rem;
+}
+.cite-label {
+  font-size: .72rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: .1em; color: var(--terracotta-dark); margin-bottom: .5rem;
+}
+.cite-text { font-family: var(--serif); font-size: .92rem; color: var(--gray); margin-bottom: .8rem; }
+
+@media print {
+  .topbar, .site-header, .site-footer, .social-share, .lang-switch,
+  #relatedSection, .back-link, .nav-overlay, .btn { display: none !important; }
+  body { background: #fff; font-size: 12pt; }
+  .article-body a::after { content: " (" attr(href) ")"; font-size: 9pt; color: #666; }
+}
