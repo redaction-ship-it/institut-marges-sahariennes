@@ -150,11 +150,11 @@
       ? `${escapeHtml(article.date || "")} · ${byWord} ${escapeHtml(article.author)} · ${readLabel}`
       : `Forthcoming · ${byWord} ${escapeHtml(article.author)}`;
 
-    // Version dans l'autre langue, si elle existe
+    // Other-language version, if it exists
     const twin = IMS_DATA.decryptages.find(n => n.slug !== article.slug && n.altSlug === article.slug || n.slug === article.altSlug);
     const langLink = twin ? `<div class="lang-switch"><a href="article.html?slug=${twin.slug}">${article.lang === "en" ? "🇫🇷 Lire en français" : "🇬🇧 Read in English"}</a></div>` : "";
 
-    // SEO dynamique
+    // Dynamic SEO
     const desc = article.excerpt || "";
     document.querySelector('meta[name="description"]')?.setAttribute("content", desc);
     document.querySelector('meta[property="og:title"]')?.setAttribute("content", article.title);
@@ -197,10 +197,10 @@
       <div class="flex-between" style="border-top:1px solid var(--border); padding-top:1.25rem; margin-top:1.5rem;">
         <div class="tag-list"><span class="tag-pill">${escapeHtml(catLabel(article.category))}</span></div>
         <div class="social-share">
-          <a class="share-btn" id="shareLinkedin" target="_blank" rel="noopener" title="Partager sur LinkedIn">in</a>
-          <a class="share-btn" id="shareX" target="_blank" rel="noopener" title="Partager sur X">𝕏</a>
-          <button type="button" class="share-btn" title="Copier le lien" id="shareCopy">🔗</button>
-          <button type="button" class="share-btn" title="Partager" id="shareNative">↗</button>
+          <a class="share-btn" id="shareLinkedin" target="_blank" rel="noopener" title="Share on LinkedIn">in</a>
+          <a class="share-btn" id="shareX" target="_blank" rel="noopener" title="Share on X">𝕏</a>
+          <button type="button" class="share-btn" title="Copy link" id="shareCopy">🔗</button>
+          <button type="button" class="share-btn" title="Share" id="shareNative">↗</button>
         </div>
       </div>`;
 
@@ -214,10 +214,10 @@
       const citation = `${article.author}, « ${article.title} », Institute for Saharan Margins, ${article.date}. https://ims-advisory.afripolitique.com/article?slug=${article.slug}`;
       const citeBox = document.createElement("div");
       citeBox.className = "cite-box";
-      citeBox.innerHTML = `<div class="cite-label">Citer cette publication</div><p class="cite-text">${escapeHtml(citation)}</p><button type="button" class="btn btn-outline-dark" id="citeCopy" style="font-size:.8rem;padding:.4rem .9rem;">Copier la citation</button>`;
+      citeBox.innerHTML = `<div class="cite-label">Citer cette publication</div><p class="cite-text">${escapeHtml(citation)}</p><button type="button" class="btn btn-outline-dark" id="citeCopy" style="font-size:.8rem;padding:.4rem .9rem;">Copy citation</button>`;
       container.appendChild(citeBox);
       qs("#citeCopy").addEventListener("click", () => {
-        navigator.clipboard?.writeText(citation).then(() => showToast("Citation copiée."))
+        navigator.clipboard?.writeText(citation).then(() => showToast("Citation copied."))
           .catch(() => showToast("Impossible de copier la citation."));
       });
     }

@@ -204,7 +204,7 @@
 <!-- Modale détail publication -->
 <div class="modal-overlay" id="pubModal">
   <div class="modal-box">
-    <button class="modal-close" data-modal-close aria-label="Fermer">✕</button>
+    <button class="modal-close" data-modal-close aria-label="Close">✕</button>
     <div id="pubModalContent"></div>
   </div>
 </div>
@@ -257,7 +257,7 @@
             <div class="card-meta">${catLabel(p.category)} · ${escapeHtml(p.date || "")}</div>
             <h3>${escapeHtml(p.title)}</h3>
             <p>${escapeHtml(p.summary)}</p>
-            <span class="card-link">Lire la note →</span>
+            <span class="card-link">Read the note →</span>
           </div>
         </a>`;
       return el;
