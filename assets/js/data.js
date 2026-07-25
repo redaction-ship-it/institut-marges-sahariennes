@@ -18,7 +18,7 @@ window.IMS_DATA = {
     { id: "strategie",   label: "Études stratégiques, technologies & anticipation" }
   ],
 
-  /* Trois blocs régionaux couverts par l'Institut */
+  /* Quatre blocs régionaux couverts par l'Institut */
   regions: [
     {
       id: "sahel",
@@ -34,6 +34,11 @@ window.IMS_DATA = {
       id: "quadrilatere",
       label: "Le Sahara",
       countries: ["Libye", "Soudan", "Tchad", "RCA"]
+    },
+    {
+      id: "mer-rouge",
+      label: "Mer Rouge & Corne de l'Afrique",
+      countries: ["Soudan", "Érythrée", "Djibouti", "Éthiopie", "Somalie"]
     }
   ],
 
@@ -309,7 +314,7 @@ window.IMS_DATA = {
       name: "Tchoudiba Bourdjolbo",
       role: "Fondateur & directeur",
       initials: "TB",
-      bio: "Fondateur de l'Institut des Marges Sahariennes, Tchoudiba Bourdjolbo conduit des recherches sur les marges sahélo-sahariennes et les politiques publiques territoriales, sur trois blocs régionaux : le Sahel, le bassin du Lac Tchad et le Sahara.",
+      bio: "Fondateur de l'Institut des Marges Sahariennes, Tchoudiba Bourdjolbo conduit des recherches sur les marges sahélo-sahariennes et les politiques publiques territoriales, sur quatre blocs régionaux : le Sahel, le bassin du Lac Tchad, le Sahara et la Mer Rouge.",
       focus: ["regimes", "gouvernance"],
       isFounder: true
     }
