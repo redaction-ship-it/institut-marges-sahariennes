@@ -23,22 +23,22 @@ window.IMS_DATA = {
     {
       id: "sahel",
       label: "Le Sahel",
-      countries: ["Mauritanie", "Mali", "Burkina Faso", "Niger", "Tchad"]
+      countries: ["Mauritanie", "Mali", "Burkina Faso", "Niger"]
     },
     {
       id: "lac-tchad",
       label: "Bassin du Lac Tchad",
-      countries: ["Tchad", "Niger", "Nigéria", "Cameroun"]
+      countries: ["Tchad", "Nigéria", "Cameroun"]
     },
     {
       id: "quadrilatere",
       label: "Le Sahara",
-      countries: ["Libye", "Soudan", "Tchad", "RCA"]
+      countries: ["Libye", "Soudan", "RCA"]
     },
     {
       id: "mer-rouge",
       label: "Mer Rouge & Corne de l'Afrique",
-      countries: ["Soudan", "Érythrée", "Djibouti", "Éthiopie", "Somalie"]
+      countries: ["Érythrée", "Djibouti", "Éthiopie", "Somalie"]
     }
   ],
 
@@ -57,9 +57,9 @@ window.IMS_DATA = {
           "pages": "Web",
           "cover": "assets/img/quadrangle-saharien-cover.png",
           "authors": [
-                "Tchoudiba Bourdjolbo"
+                "Institut des Marges Sahariennes"
           ],
-          "author": "Tchoudiba Bourdjolbo",
+          "author": "Institut des Marges Sahariennes",
           "summary": "Note d'analyse sur l'embrasement du quadrangle Libye-Tchad-Soudan-RCA : la guerre soudanaise comme accélérateur régional, la prédation des ressources (or, antimoine, diamants), plus de 15 millions de déplacés, et des leviers d'action pour les bailleurs fondés sur le Triple Nexus.",
           "excerpt": "L'architecture sécuritaire du centre de l'Afrique s'effondre. La guerre civile soudanaise accélère un embrasement régional touchant la Libye, le Tchad et la RCA — prédation des ressources, plus de 15 millions de déplacés, ingérences étrangères. L'IMS décrypte cette métastase et propose des leviers d'action pour les États et les bailleurs.",
           "tags": [
@@ -101,7 +101,7 @@ window.IMS_DATA = {
                 "<div style=\"display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.4rem 0;\"><div style=\"background:#fff;border:1px solid #e3d7bf;border-top:3px solid #17284a;border-radius:6px;padding:1rem 1.15rem;\"><h4 style=\"font-family:Segoe UI,Arial,sans-serif;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#17284a;margin:0 0 .45rem;\">Pour les États de la région</h4><p style=\"margin:0;font-size:.92rem;color:#333;line-height:1.55;\">Refonte totale de la sécurité frontalière : abandonner les milices communautaires au profit de garde-frontières professionnels, et adopter une stricte neutralité géopolitique face aux belligérants étrangers.</p></div><div style=\"background:#fff;border:1px solid #e3d7bf;border-top:3px solid #17284a;border-radius:6px;padding:1rem 1.15rem;\"><h4 style=\"font-family:Segoe UI,Arial,sans-serif;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#17284a;margin:0 0 .45rem;\">Pour les institutions financières (BM, FMI)</h4><p style=\"margin:0;font-size:.92rem;color:#333;line-height:1.55;\">Soutenir d'urgence les budgets nationaux — celui du Tchad en premier lieu — par des appuis budgétaires ciblés, conditionnés à la lutte contre la corruption et à l'intégration économique des réfugiés, pour éviter un krach macroéconomique.</p></div><div style=\"background:#fff;border:1px solid #e3d7bf;border-top:3px solid #17284a;border-radius:6px;padding:1rem 1.15rem;\"><h4 style=\"font-family:Segoe UI,Arial,sans-serif;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#17284a;margin:0 0 .45rem;\">Pour les Nations unies et les ONG</h4><p style=\"margin:0;font-size:.92rem;color:#333;line-height:1.55;\">Intensifier le plaidoyer pour le déblocage de fonds massifs dédiés aux zones en phase IPC 4/5, tout en renforçant les programmes de protection des civils (PoC) et de prévention des violences basées sur le genre.</p></div><div style=\"background:#fff;border:1px solid #e3d7bf;border-top:3px solid #17284a;border-radius:6px;padding:1rem 1.15rem;\"><h4 style=\"font-family:Segoe UI,Arial,sans-serif;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#17284a;margin:0 0 .45rem;\">Pour les pays donateurs et l'UE</h4><p style=\"margin:0;font-size:.92rem;color:#333;line-height:1.55;\">Renforcer l'arsenal des sanctions ciblées contre les réseaux de contrebande transnationaux et imposer un embargo financier strict sur l'or de conflit issu de ce quadrangle.</p></div></div>",
                 "<h2>6. Sources et références méthodologiques</h2>",
                 "<div style=\"font-size:.9rem;color:#444;background:#faf6ee;border:1px solid #e3d7bf;border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;\">Ce décryptage a été élaboré en croisant le renseignement de terrain avec les données issues de l'OSINT (Open Source Intelligence) et les rapports des organisations internationales.</div>",
-                "<ul style=\"list-style:none;margin:.5rem 0 0;padding:0;font-size:.85rem;color:#5b5346;\"><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">Tchoudiba Bourdjolbo / IMS — « Am-Dafock : quand la guerre du Soudan franchit la frontière centrafricaine », Collection Cahiers du Tibesti, 12 juillet 2026.</li><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">IMS — Analyse géospatiale et sécuritaire sur le front libyen, note interne « La contagion des fronts sahéliens / Le Sud libyen », juillet 2026.</li><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">IPC &amp; PAM — Données 2025-2026 sur les niveaux d'insécurité alimentaire (Phases 4 et 5) au Soudan et dans les provinces orientales du Tchad.</li><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">HCR — <a href=\"https://www.unhcr.org/publications/global-appeal-2026\" style=\"color:#c1440e;\">Global Appeal 2026</a> (15,3 M de déracinés au Soudan) &amp; <a href=\"https://data.unhcr.org/en/country/tcd\" style=\"color:#c1440e;\">Portail opérationnel — Tchad</a>.</li><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">OCHA — <a href=\"https://www.unocha.org/publications/report/sudan/sudan-humanitarian-needs-and-response-plan-2026-summary\" style=\"color:#c1440e;\">Sudan Humanitarian Needs and Response Plan 2026</a> (2,9 Mds $ requis, ~16 % financé).</li><li style=\"padding:.3rem 0;\">ONU / Panel d'experts sur le Soudan — <a href=\"https://news.un.org/en/story/2026/07/1167944\" style=\"color:#c1440e;\">« Looted gold and gum arabic are bankrolling Sudan's war »</a> (or du Darfour, ≈ 860 M$ pour les FSR en 2024).</li></ul>"
+                "<ul style=\"list-style:none;margin:.5rem 0 0;padding:0;font-size:.85rem;color:#5b5346;\"><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">IMS — « Am-Dafock : quand la guerre du Soudan franchit la frontière centrafricaine », Collection Cahiers du Tibesti, 12 juillet 2026.</li><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">IMS — Analyse géospatiale et sécuritaire sur le front libyen, note interne « La contagion des fronts sahéliens / Le Sud libyen », juillet 2026.</li><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">IPC &amp; PAM — Données 2025-2026 sur les niveaux d'insécurité alimentaire (Phases 4 et 5) au Soudan et dans les provinces orientales du Tchad.</li><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">HCR — <a href=\"https://www.unhcr.org/publications/global-appeal-2026\" style=\"color:#c1440e;\">Global Appeal 2026</a> (15,3 M de déracinés au Soudan) &amp; <a href=\"https://data.unhcr.org/en/country/tcd\" style=\"color:#c1440e;\">Portail opérationnel — Tchad</a>.</li><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">OCHA — <a href=\"https://www.unocha.org/publications/report/sudan/sudan-humanitarian-needs-and-response-plan-2026-summary\" style=\"color:#c1440e;\">Sudan Humanitarian Needs and Response Plan 2026</a> (2,9 Mds $ requis, ~16 % financé).</li><li style=\"padding:.3rem 0;\">ONU / Panel d'experts sur le Soudan — <a href=\"https://news.un.org/en/story/2026/07/1167944\" style=\"color:#c1440e;\">« Looted gold and gum arabic are bankrolling Sudan's war »</a> (or du Darfour, ≈ 860 M$ pour les FSR en 2024).</li></ul>"
           ]
     },
     {
@@ -111,7 +111,7 @@ window.IMS_DATA = {
       type: "Note de conjoncture",
       status: "forthcoming",
       pages: "4-6",
-      authors: ["Tchoudiba Bourdjolbo"],
+      authors: ["Institut des Marges Sahariennes"],
       summary: "Note de conjoncture en préparation sur les équilibres claniques et militaires issus de la succession à la tête de l'État tchadien depuis 2021.",
       tags: ["Tchad", "succession", "clans militaires"]
     },
@@ -122,7 +122,7 @@ window.IMS_DATA = {
       type: "Note de conjoncture",
       status: "forthcoming",
       pages: "4-6",
-      authors: ["Tchoudiba Bourdjolbo"],
+      authors: ["Institut des Marges Sahariennes"],
       summary: "Note de conjoncture en préparation sur les circulations d'hommes et de ressources entre les Forces de soutien rapide, la constellation tchadienne (FACT) et les zones frontalières du Tibesti et du Borkou.",
       tags: ["RSF", "FACT", "Tibesti", "Borkou"]
     },
@@ -133,7 +133,7 @@ window.IMS_DATA = {
       type: "Note de conjoncture",
       status: "forthcoming",
       pages: "4-6",
-      authors: ["Tchoudiba Bourdjolbo"],
+      authors: ["Institut des Marges Sahariennes"],
       summary: "Note de conjoncture en préparation sur les recompositions de pouvoir dans le Fezzan et leurs effets sur les marges tchadiennes et soudanaises.",
       tags: ["Libye", "Fezzan", "Haftar"]
     },
@@ -144,7 +144,7 @@ window.IMS_DATA = {
       type: "Note de conjoncture",
       status: "forthcoming",
       pages: "4-6",
-      authors: ["Tchoudiba Bourdjolbo"],
+      authors: ["Institut des Marges Sahariennes"],
       summary: "Note de conjoncture en préparation sur les circuits aurifères reliant le Darfour au Tchad, à la Libye et aux marchés du Golfe.",
       tags: ["or", "Darfour", "contrebande"]
     },
@@ -155,7 +155,7 @@ window.IMS_DATA = {
       type: "Rapport",
       status: "forthcoming",
       pages: "40-50",
-      authors: ["Tchoudiba Bourdjolbo"],
+      authors: ["Institut des Marges Sahariennes"],
       summary: "Rapport de fond, produit d'appel du lancement de l'Institut : une lecture approfondie des dispositifs de pouvoir tchadiens depuis 2021, de leurs ressorts claniques et militaires, et de leurs prolongements régionaux.",
       tags: ["Tchad", "rapport de fond", "clans militaires"]
     },
@@ -166,7 +166,7 @@ window.IMS_DATA = {
       type: "Working Paper",
       status: "forthcoming",
       pages: "20-30",
-      authors: ["Tchoudiba Bourdjolbo"],
+      authors: ["Institut des Marges Sahariennes"],
       summary: "Working paper académique en préparation, articulant la question du foncier pastoral tchadien à une réflexion plus large sur la frontière et la marge comme catégories de gouvernement.",
       tags: ["foncier pastoral", "marges", "politiques publiques territoriales"]
     },
@@ -177,7 +177,7 @@ window.IMS_DATA = {
       type: "Working Paper",
       status: "forthcoming",
       pages: "15-25",
-      authors: ["Tchoudiba Bourdjolbo"],
+      authors: ["Institut des Marges Sahariennes"],
       summary: "Working paper méthodologique en préparation, présentant le dispositif de veille et d'anticipation de l'Institut : indicateurs de rupture, sources de terrain et grille de lecture des trajectoires de pouvoir.",
       tags: ["anticipation", "veille stratégique", "méthodologie"]
     }
@@ -195,7 +195,7 @@ window.IMS_DATA = {
       status: "published",
       date: "12 July 2026",
       lang: "en",
-      author: "Tchoudiba Bourdjolbo",
+      author: "Institut des Marges Sahariennes",
       excerpt: "On 18 March 2026, a drone strike killed at least seventeen mourners in Tiné, a border town split between Chad and Sudan. Beyond the military incident lies a runaway humanitarian crisis: 1.3 million refugees, a collapsing reception system and a closed border that traps civilians.",
       body: [
         "<p>On the evening of 18 March 2026, a drone struck a crowd gathered for a funeral, in a Quranic school used as a place of mourning, in Tiné, a border town split in two between Chad and Sudan. The toll — at least seventeen dead, with counts ranging from fifteen to nineteen, and sixty-six people seriously wounded and evacuated to hospital — speaks to the brutality of the act. But behind the military incident lies a wider and more lasting reality: the humanitarian collapse of a border that has become the outlet for Sudan's war.</p>",
@@ -224,7 +224,7 @@ window.IMS_DATA = {
       category: "securite",
       status: "published",
       date: "12 juillet 2026",
-      author: "Tchoudiba Bourdjolbo",
+      author: "Institut des Marges Sahariennes",
       excerpt: "Le 18 mars 2026, une frappe de drone a tué au moins dix-sept civils en deuil à Tiné, ville frontalière coupée en deux entre le Tchad et le Soudan. Derrière l'incident militaire, une crise humanitaire hors de contrôle : 1,3 million de réfugiés, un système d'accueil à l'agonie et une frontière fermée qui piège les civils.",
       body: [
         "<p>Le 18 mars 2026, en début de soirée, un drone s'est abattu sur une foule rassemblée pour un deuil, dans une école coranique servant de lieu de recueillement, à Tiné, ville frontalière coupée en deux entre le Tchad et le Soudan. Le bilan — au moins dix-sept morts, les décomptes variant de quinze à dix-neuf, et soixante-six blessés graves évacués vers l'hôpital — dit la brutalité du geste. Mais derrière l'incident militaire se joue une réalité plus vaste et plus durable : l'effondrement humanitaire d'une frontière devenue le déversoir de la guerre du Soudan.</p>",
@@ -252,7 +252,7 @@ window.IMS_DATA = {
       category: "securite",
       status: "published",
       date: "12 juillet 2026",
-      author: "Tchoudiba Bourdjolbo",
+      author: "Institut des Marges Sahariennes",
       excerpt: "Le 30 juin 2026, la coalition ASP a tenu Am-Dafock cinq jours face aux FACA et à leurs alliés russes. Un basculement tactique qui signale l'entrée de la RCA dans l'orbite de la guerre du Soudan.",
       body: [
         "<p>Le 30 juin 2026, plus de 700 combattants d'une nouvelle coalition, l'Alliance du sursaut patriotique (ASP), ont pris pied à Am-Dafock, à la frontière soudanaise. Reprise cinq jours plus tard par les Forces armées centrafricaines (FACA) et leurs alliés russes, la localité n'est pas un incident isolé : elle signale l'entrée de la République centrafricaine dans l'orbite de la guerre du Soudan et l'ouverture possible d'un nouveau cycle de conflit armé.</p>",
@@ -275,7 +275,7 @@ window.IMS_DATA = {
       title: "Soudan : où en est le rapport de force entre RSF et forces armées soudanaises ?",
       category: "securite",
       status: "forthcoming",
-      author: "Tchoudiba Bourdjolbo",
+      author: "Institut des Marges Sahariennes",
       excerpt: "Décryptage en préparation sur l'évolution du rapport de force militaire et territorial entre les Forces de soutien rapide et l'armée soudanaise."
     },
     {
@@ -283,7 +283,7 @@ window.IMS_DATA = {
       title: "Tchad : la transition, deux ans après",
       category: "regimes",
       status: "forthcoming",
-      author: "Tchoudiba Bourdjolbo",
+      author: "Institut des Marges Sahariennes",
       excerpt: "Décryptage en préparation dressant un bilan de la transition politique tchadienne et de ses recompositions internes."
     },
     {
@@ -291,7 +291,7 @@ window.IMS_DATA = {
       title: "Libye : Haftar et la carte du Sud",
       category: "regimes",
       status: "forthcoming",
-      author: "Tchoudiba Bourdjolbo",
+      author: "Institut des Marges Sahariennes",
       excerpt: "Décryptage en préparation sur les rapports de force dans le Fezzan et leurs répercussions sur les marges tchado-soudanaises."
     },
     {
@@ -299,7 +299,7 @@ window.IMS_DATA = {
       title: "Or, contrebande et États faibles au Sahara central",
       category: "economie",
       status: "forthcoming",
-      author: "Tchoudiba Bourdjolbo",
+      author: "Institut des Marges Sahariennes",
       excerpt: "Décryptage en préparation sur les circuits informels de l'or et leur rôle dans la fabrique du pouvoir local au Sahara central."
     }
   ],
@@ -308,17 +308,7 @@ window.IMS_DATA = {
      Le conseil scientifique est en cours de constitution : les postes
      ci-dessous sont des intitulés de couverture géographique à pourvoir,
      pas des noms réels. Ne pas inventer de noms. */
-  team: [
-    {
-      slug: "tchoudiba-bourdjolbo",
-      name: "Tchoudiba Bourdjolbo",
-      role: "Fondateur & directeur",
-      initials: "TB",
-      bio: "Fondateur de l'Institut des Marges Sahariennes, Tchoudiba Bourdjolbo conduit des recherches sur les marges sahélo-sahariennes et les politiques publiques territoriales, sur quatre blocs régionaux : le Sahel, le bassin du Lac Tchad, le Sahara et la Mer Rouge.",
-      focus: ["regimes", "gouvernance"],
-      isFounder: true
-    }
-  ],
+  team: [],
 
   scientificCouncilSeats: [
     { country: "Tchad",          status: "à pourvoir" },

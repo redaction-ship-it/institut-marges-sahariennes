@@ -23,22 +23,22 @@ window.IMS_DATA = {
     {
       id: "sahel",
       label: "The Sahel",
-      countries: ["Mauritania", "Mali", "Burkina Faso", "Niger", "Chad"]
+      countries: ["Mauritania", "Mali", "Burkina Faso", "Niger"]
     },
     {
       id: "lac-tchad",
       label: "Lake Chad Basin",
-      countries: ["Chad", "Niger", "Nigeria", "Cameroon"]
+      countries: ["Chad", "Nigeria", "Cameroon"]
     },
     {
       id: "quadrilatere",
       label: "The Sahara",
-      countries: ["Libya", "Sudan", "Chad", "CAR"]
+      countries: ["Libya", "Sudan", "CAR"]
     },
     {
       id: "mer-rouge",
       label: "Red Sea & Horn of Africa",
-      countries: ["Sudan", "Eritrea", "Djibouti", "Ethiopia", "Somalia"]
+      countries: ["Eritrea", "Djibouti", "Ethiopia", "Somalia"]
     }
   ],
 
@@ -57,9 +57,9 @@ window.IMS_DATA = {
           "pages": "Web",
           "cover": "/assets/img/quadrangle-saharien-cover.png",
           "authors": [
-                "Tchoudiba Bourdjolbo"
+                "Institute for Saharan Margins"
           ],
-          "author": "Tchoudiba Bourdjolbo",
+          "author": "Institute for Saharan Margins",
           "summary": "Analysis of the conflagration in the Libya-Chad-Sudan-CAR quadrangle: Sudan's war as a regional accelerant, resource predation (gold, antimony, diamonds), more than 15 million displaced people, and levers for donors grounded in the Triple Nexus.",
           "excerpt": "The security architecture of central Africa is collapsing. Sudan's civil war is accelerating a regional conflagration reaching Libya, Chad and CAR — resource predation, more than 15 million displaced people, foreign interference. IMS analyses this metastasis and proposes levers for states and donors.",
           "tags": [
@@ -101,7 +101,7 @@ window.IMS_DATA = {
                 "<div style=\"display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.4rem 0;\"><div style=\"background:#fff;border:1px solid #e3d7bf;border-top:3px solid #17284a;border-radius:6px;padding:1rem 1.15rem;\"><h4 style=\"font-family:Segoe UI,Arial,sans-serif;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#17284a;margin:0 0 .45rem;\">For states in the region</h4><p style=\"margin:0;font-size:.92rem;color:#333;line-height:1.55;\">A complete overhaul of border security: abandon community militias in favour of professional border guards, and adopt strict geopolitical neutrality towards foreign belligerents.</p></div><div style=\"background:#fff;border:1px solid #e3d7bf;border-top:3px solid #17284a;border-radius:6px;padding:1rem 1.15rem;\"><h4 style=\"font-family:Segoe UI,Arial,sans-serif;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#17284a;margin:0 0 .45rem;\">For financial institutions (World Bank, IMF)</h4><p style=\"margin:0;font-size:.92rem;color:#333;line-height:1.55;\">Urgently support national budgets — Chad's first — through targeted budget support conditional on anti-corruption measures and the economic integration of refugees, to avoid a macroeconomic crash.</p></div><div style=\"background:#fff;border:1px solid #e3d7bf;border-top:3px solid #17284a;border-radius:6px;padding:1rem 1.15rem;\"><h4 style=\"font-family:Segoe UI,Arial,sans-serif;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#17284a;margin:0 0 .45rem;\">For the United Nations and NGOs</h4><p style=\"margin:0;font-size:.92rem;color:#333;line-height:1.55;\">Step up advocacy for the release of large-scale funding for IPC phase 4/5 areas, while strengthening civilian protection (PoC) and gender-based violence prevention programmes.</p></div><div style=\"background:#fff;border:1px solid #e3d7bf;border-top:3px solid #17284a;border-radius:6px;padding:1rem 1.15rem;\"><h4 style=\"font-family:Segoe UI,Arial,sans-serif;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#17284a;margin:0 0 .45rem;\">For donor countries and the EU</h4><p style=\"margin:0;font-size:.92rem;color:#333;line-height:1.55;\">Strengthen the arsenal of targeted sanctions against transnational smuggling networks and impose a strict financial embargo on conflict gold from this quadrangle.</p></div></div>",
                 "<h2>6. Sources and methodological references</h2>",
                 "<div style=\"font-size:.9rem;color:#444;background:#faf6ee;border:1px solid #e3d7bf;border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;\">This analysis was produced by combining field intelligence with OSINT (Open Source Intelligence) data and reports from international organisations.</div>",
-                "<ul style=\"list-style:none;margin:.5rem 0 0;padding:0;font-size:.85rem;color:#5b5346;\"><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">Tchoudiba Bourdjolbo / IMS — « Am-Dafock: when Sudan's war crosses into the Central African Republic », Cahiers du Tibesti collection, 12 July 2026.</li><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">IMS — Geospatial and security analysis on the Libyan front, internal note « The contagion of Sahelian fronts / Southern Libya », July 2026.</li><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">IPC &amp; WFP — 2025-2026 data on food insecurity levels (Phases 4 and 5) in Sudan and the eastern provinces of Chad.</li><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">UNHCR — <a href=\"https://www.unhcr.org/publications/global-appeal-2026\" style=\"color:#c1440e;\">Global Appeal 2026</a> (15.3M uprooted in Sudan) &amp; <a href=\"https://data.unhcr.org/en/country/tcd\" style=\"color:#c1440e;\">Operational portal — Chad</a>.</li><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">OCHA — <a href=\"https://www.unocha.org/publications/report/sudan/sudan-humanitarian-needs-and-response-plan-2026-summary\" style=\"color:#c1440e;\">Sudan Humanitarian Needs and Response Plan 2026</a> ($2.9bn required, ~16% funded).</li><li style=\"padding:.3rem 0;\">UN / Panel of Experts on Sudan — <a href=\"https://news.un.org/en/story/2026/07/1167944\" style=\"color:#c1440e;\">« Looted gold and gum arabic are bankrolling Sudan's war »</a> (Darfur gold, ≈ $860M for the RSF in 2024).</li></ul>"
+                "<ul style=\"list-style:none;margin:.5rem 0 0;padding:0;font-size:.85rem;color:#5b5346;\"><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">IMS — « Am-Dafock: when Sudan's war crosses into the Central African Republic », Cahiers du Tibesti collection, 12 July 2026.</li><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">IMS — Geospatial and security analysis on the Libyan front, internal note « The contagion of Sahelian fronts / Southern Libya », July 2026.</li><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">IPC &amp; WFP — 2025-2026 data on food insecurity levels (Phases 4 and 5) in Sudan and the eastern provinces of Chad.</li><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">UNHCR — <a href=\"https://www.unhcr.org/publications/global-appeal-2026\" style=\"color:#c1440e;\">Global Appeal 2026</a> (15.3M uprooted in Sudan) &amp; <a href=\"https://data.unhcr.org/en/country/tcd\" style=\"color:#c1440e;\">Operational portal — Chad</a>.</li><li style=\"padding:.3rem 0;border-bottom:1px dashed #e3d7bf;\">OCHA — <a href=\"https://www.unocha.org/publications/report/sudan/sudan-humanitarian-needs-and-response-plan-2026-summary\" style=\"color:#c1440e;\">Sudan Humanitarian Needs and Response Plan 2026</a> ($2.9bn required, ~16% funded).</li><li style=\"padding:.3rem 0;\">UN / Panel of Experts on Sudan — <a href=\"https://news.un.org/en/story/2026/07/1167944\" style=\"color:#c1440e;\">« Looted gold and gum arabic are bankrolling Sudan's war »</a> (Darfur gold, ≈ $860M for the RSF in 2024).</li></ul>"
           ]
     },
     {
@@ -111,7 +111,7 @@ window.IMS_DATA = {
       type: "Situation note",
       status: "forthcoming",
       pages: "4-6",
-      authors: ["Tchoudiba Bourdjolbo"],
+      authors: ["Institute for Saharan Margins"],
       summary: "Situation note in preparation on the clan and military balances arising from the succession at the head of the Chadian state since 2021.",
       tags: ["Chad", "succession", "military clans"]
     },
@@ -122,7 +122,7 @@ window.IMS_DATA = {
       type: "Situation note",
       status: "forthcoming",
       pages: "4-6",
-      authors: ["Tchoudiba Bourdjolbo"],
+      authors: ["Institute for Saharan Margins"],
       summary: "Situation note in preparation on the movement of people and resources between the Rapid Support Forces, the Chadian FACT constellation and the border areas of Tibesti and Borkou.",
       tags: ["RSF", "FACT", "Tibesti", "Borkou"]
     },
@@ -133,7 +133,7 @@ window.IMS_DATA = {
       type: "Situation note",
       status: "forthcoming",
       pages: "4-6",
-      authors: ["Tchoudiba Bourdjolbo"],
+      authors: ["Institute for Saharan Margins"],
       summary: "Situation note in preparation on power realignments in the Fezzan and their effects on the Chadian and Sudanese margins.",
       tags: ["Libya", "Fezzan", "Haftar"]
     },
@@ -144,7 +144,7 @@ window.IMS_DATA = {
       type: "Situation note",
       status: "forthcoming",
       pages: "4-6",
-      authors: ["Tchoudiba Bourdjolbo"],
+      authors: ["Institute for Saharan Margins"],
       summary: "Situation note in preparation on the gold circuits linking Darfur to Chad, Libya and Gulf markets.",
       tags: ["gold", "Darfur", "smuggling"]
     },
@@ -155,7 +155,7 @@ window.IMS_DATA = {
       type: "Report",
       status: "forthcoming",
       pages: "40-50",
-      authors: ["Tchoudiba Bourdjolbo"],
+      authors: ["Institute for Saharan Margins"],
       summary: "In-depth report, the flagship of the Institute's launch: a close reading of Chadian power structures since 2021, their clan and military underpinnings, and their regional extensions.",
       tags: ["Chad", "in-depth report", "military clans"]
     },
@@ -166,7 +166,7 @@ window.IMS_DATA = {
       type: "Working Paper",
       status: "forthcoming",
       pages: "20-30",
-      authors: ["Tchoudiba Bourdjolbo"],
+      authors: ["Institute for Saharan Margins"],
       summary: "Academic working paper in preparation, linking Chadian pastoral land tenure to a wider reflection on the border and the margin as categories of government.",
       tags: ["pastoral land tenure", "margins", "territorial public policy"]
     },
@@ -177,7 +177,7 @@ window.IMS_DATA = {
       type: "Working Paper",
       status: "forthcoming",
       pages: "15-25",
-      authors: ["Tchoudiba Bourdjolbo"],
+      authors: ["Institute for Saharan Margins"],
       summary: "Methodological working paper in preparation, setting out the Institute's monitoring and foresight framework: rupture indicators, field sources and a reading grid for trajectories of power.",
       tags: ["foresight", "strategic monitoring", "methodology"]
     }
@@ -195,7 +195,7 @@ window.IMS_DATA = {
       status: "published",
       date: "12 July 2026",
       lang: "en",
-      author: "Tchoudiba Bourdjolbo",
+      author: "Institute for Saharan Margins",
       excerpt: "On 18 March 2026, a drone strike killed at least seventeen mourners in Tiné, a border town split between Chad and Sudan. Beyond the military incident lies a runaway humanitarian crisis: 1.3 million refugees, a collapsing reception system and a closed border that traps civilians.",
       body: [
         "<p>On the evening of 18 March 2026, a drone struck a crowd gathered for a funeral, in a Quranic school used as a place of mourning, in Tiné, a border town split in two between Chad and Sudan. The toll — at least seventeen dead, with counts ranging from fifteen to nineteen, and sixty-six people seriously wounded and evacuated to hospital — speaks to the brutality of the act. But behind the military incident lies a wider and more lasting reality: the humanitarian collapse of a border that has become the outlet for Sudan's war.</p>",
@@ -223,7 +223,7 @@ window.IMS_DATA = {
       category: "securite",
       status: "published",
       date: "12 July 2026",
-      author: "Tchoudiba Bourdjolbo",
+      author: "Institute for Saharan Margins",
       excerpt: "On 30 June 2026, the ASP coalition held Am-Dafock for five days against the FACA and their Russian allies. A tactical shift that signals CAR's entry into the orbit of Sudan's war.",
       body: [
         "<p>On 30 June 2026, more than 700 fighters from a new coalition, the Alliance du sursaut patriotique (ASP), took control of Am-Dafock on the Sudanese border. Retaken five days later by the Central African Armed Forces (FACA) and their Russian allies, the town is not an isolated incident: it signals the Central African Republic's entry into the orbit of Sudan's war and the possible opening of a new cycle of armed conflict.</p>",
@@ -246,7 +246,7 @@ window.IMS_DATA = {
       title: "Sudan: where does the balance of power between the RSF and the armed forces stand?",
       category: "securite",
       status: "forthcoming",
-      author: "Tchoudiba Bourdjolbo",
+      author: "Institute for Saharan Margins",
       excerpt: "Analysis in preparation on the shifting military and territorial balance between the Rapid Support Forces and the Sudanese army."
     },
     {
@@ -254,7 +254,7 @@ window.IMS_DATA = {
       title: "Chad: the transition, two years on",
       category: "regimes",
       status: "forthcoming",
-      author: "Tchoudiba Bourdjolbo",
+      author: "Institute for Saharan Margins",
       excerpt: "Analysis in preparation taking stock of Chad's political transition and its internal realignments."
     },
     {
@@ -262,7 +262,7 @@ window.IMS_DATA = {
       title: "Libya: Haftar and the map of the south",
       category: "regimes",
       status: "forthcoming",
-      author: "Tchoudiba Bourdjolbo",
+      author: "Institute for Saharan Margins",
       excerpt: "Analysis in preparation on the balance of power in the Fezzan and its repercussions on the Chad-Sudan margins."
     },
     {
@@ -270,7 +270,7 @@ window.IMS_DATA = {
       title: "Gold, smuggling and weak states in the central Sahara",
       category: "economie",
       status: "forthcoming",
-      author: "Tchoudiba Bourdjolbo",
+      author: "Institute for Saharan Margins",
       excerpt: "Analysis in preparation on informal gold circuits and their role in the making of local power in the central Sahara."
     }
   ],
@@ -279,17 +279,7 @@ window.IMS_DATA = {
      Le conseil scientifique est en cours de constitution : les postes
      ci-dessous sont des intitulés de couverture géographique à pourvoir,
      pas des noms réels. Ne pas inventer de noms. */
-  team: [
-    {
-      slug: "tchoudiba-bourdjolbo",
-      name: "Tchoudiba Bourdjolbo",
-      role: "Founder & director",
-      initials: "TB",
-      bio: "Founder of the Institute for Saharan Margins, Tchoudiba Bourdjolbo conducts research on the Sahelo-Saharan margins and territorial public policy across four regional blocs: the Sahel, the Lake Chad basin, the Sahara and the Red Sea.",
-      focus: ["regimes", "gouvernance"],
-      isFounder: true
-    }
-  ],
+  team: [],
 
   scientificCouncilSeats: [
     { country: "Chad",          status: "to be filled" },
