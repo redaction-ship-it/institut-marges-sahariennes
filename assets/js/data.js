@@ -7,13 +7,15 @@
 
 window.IMS_DATA = {
 
-  /* Cinq axes d'expertise — un périmètre resserré */
+  /* Sept axes de recherche — périmètre thématique large, aire géographique resserrée */
   categories: [
     { id: "regimes",     label: "Régimes politiques & trajectoires de pouvoir" },
     { id: "securite",    label: "Sécurité régionale & acteurs armés" },
     { id: "economie",    label: "Économie politique des ressources" },
-    { id: "gouvernance", label: "Gouvernance des marges & politiques publiques" },
-    { id: "strategie",   label: "Études stratégiques & anticipation" }
+    { id: "gouvernance", label: "Gouvernance des marges & résolution des conflits" },
+    { id: "climat",      label: "Climat, environnement & systèmes agro-pastoraux" },
+    { id: "migrations",  label: "Migrations, mobilités & urbanisation" },
+    { id: "strategie",   label: "Études stratégiques, technologies & anticipation" }
   ],
 
   /* Trois blocs régionaux couverts par l'Institut */
