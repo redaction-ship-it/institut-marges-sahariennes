@@ -30,7 +30,7 @@
     {
       "@type": "ResearchOrganization",
       "@id": "https://ims-advisory.afripolitique.com/#org",
-      "name": "Institut des Marges Sahariennes",
+      "name": "Institute for Saharan Margins",
       "alternateName": "IMS",
       "url": "https://ims-advisory.afripolitique.com/",
       "logo": "https://ims-advisory.afripolitique.com/assets/img/favicon.svg",
@@ -44,7 +44,7 @@
       "@type": "WebSite",
       "@id": "https://ims-advisory.afripolitique.com/#website",
       "url": "https://ims-advisory.afripolitique.com/",
-      "name": "Institut des Marges Sahariennes",
+      "name": "Institute for Saharan Margins",
       "publisher": {"@id": "https://ims-advisory.afripolitique.com/#org"},
       "inLanguage": "fr-FR",
       "potentialAction": {
@@ -268,10 +268,10 @@
     el.innerHTML = `
       <div class="card-media"><span class="card-tag">${escapeHtml(p.type)}</span></div>
       <div class="card-body">
-        <div class="card-meta">${catLabel(p.category)} · à paraître</div>
+        <div class="card-meta">${catLabel(p.category)} · forthcoming</div>
         <h3>${escapeHtml(p.title)}</h3>
         <p>${escapeHtml(p.summary)}</p>
-        <span class="card-link">En savoir plus →</span>
+        <span class="card-link">Read more →</span>
       </div>`;
     latestPubs.appendChild(el);
   });
@@ -284,10 +284,10 @@
     el.innerHTML = `
       <div class="card-media"><span class="card-tag">${catLabel(n.category)}</span></div>
       <div class="card-body">
-        <div class="card-meta">à paraître · ${escapeHtml(n.author)}</div>
+        <div class="card-meta">forthcoming · ${escapeHtml(n.author)}</div>
         <h3>${escapeHtml(n.title)}</h3>
         <p>${escapeHtml(n.excerpt)}</p>
-        <span class="card-link">En savoir plus →</span>
+        <span class="card-link">Read more →</span>
       </div>`;
     latestDecryptages.appendChild(el);
   });

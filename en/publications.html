@@ -265,20 +265,20 @@
     el.innerHTML = `
       <div class="card-media"><span class="card-tag">${escapeHtml(p.type)}</span></div>
       <div class="card-body">
-        <div class="card-meta">${catLabel(p.category)} · ${p.pages} p. · à paraître</div>
+        <div class="card-meta">${catLabel(p.category)} · ${p.pages} pp. · forthcoming</div>
         <h3>${escapeHtml(p.title)}</h3>
         <p>${escapeHtml(p.summary)}</p>
-        <button class="card-link" style="text-align:left;">En savoir plus →</button>
+        <button class="card-link" style="text-align:left;">Read more →</button>
       </div>`;
     qs("button", el).addEventListener("click", () => {
       qs("#pubModalContent").innerHTML = `
         <span class="eyebrow">${catLabel(p.category)}</span>
         <h3 style="margin-bottom:.5rem;">${escapeHtml(p.title)}</h3>
-        <div class="card-meta" style="margin-bottom:1rem;">${escapeHtml(p.type)} · ${p.pages} pages · à paraître</div>
+        <div class="card-meta" style="margin-bottom:1rem;">${escapeHtml(p.type)} · ${p.pages} pages · forthcoming</div>
         <p style="color:var(--gray); margin-bottom:1rem;">${escapeHtml(p.summary)}</p>
         <p style="font-size:.88rem; margin-bottom:1rem;"><strong>Auteur(s) :</strong> ${p.authors.map(escapeHtml).join(", ")}</p>
         <div class="tag-list mb-2">${p.tags.map(t => `<span class="tag-pill">${escapeHtml(t)}</span>`).join("")}</div>
-        <a href="support-contact.html#newsletter" class="btn btn-primary">Être averti·e de la parution</a>`;
+        <a href="support-contact.html#newsletter" class="btn btn-primary">Notify me on publication</a>`;
       openModal("pubModal");
     });
     return el;

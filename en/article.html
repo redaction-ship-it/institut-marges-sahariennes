@@ -129,10 +129,10 @@
 
   if (!article) {
     container.innerHTML = `
-      <h1>Décryptage introuvable</h1>
-      <p style="color:var(--gray); margin-top:1rem;">Le décryptage demandé n'existe pas ou plus. Retrouvez l'ensemble de nos parutions sur la page Décryptages.</p>`;
+      <h1>Analysis not found</h1>
+      <p style="color:var(--gray); margin-top:1rem;">The analysis you requested does not exist or is no longer available. Browse all our publications on the Analysis page.</p>`;
   } else {
-    document.title = article.title + " — Institut des Marges Sahariennes";
+    document.title = article.title + " — Institute for Saharan Margins";
     qs("#pageTitle").textContent = document.title;
 
     if (articleSource === "publications") {
@@ -148,7 +148,7 @@
     const readLabel = article.lang === "en" ? readMin + " min read" : readMin + " min de lecture";
     const metaLine = isPublished
       ? `${escapeHtml(article.date || "")} · ${byWord} ${escapeHtml(article.author)} · ${readLabel}`
-      : `À paraître · ${byWord} ${escapeHtml(article.author)}`;
+      : `Forthcoming · ${byWord} ${escapeHtml(article.author)}`;
 
     // Version dans l'autre langue, si elle existe
     const twin = IMS_DATA.decryptages.find(n => n.slug !== article.slug && n.altSlug === article.slug || n.slug === article.altSlug);
@@ -172,7 +172,7 @@
       "description": desc,
       "inLanguage": article.lang === "en" ? "en" : "fr",
       "author": { "@type": "Person", "name": article.author },
-      "publisher": { "@type": "Organization", "name": "Institut des Marges Sahariennes", "url": "https://ims-advisory.afripolitique.com/" },
+      "publisher": { "@type": "Organization", "name": "Institute for Saharan Margins", "url": "https://ims-advisory.afripolitique.com/" },
       "mainEntityOfPage": "https://ims-advisory.afripolitique.com/article?slug=" + article.slug,
       "image": article.cover ? "https://ims-advisory.afripolitique.com/" + article.cover : undefined
     });
@@ -181,8 +181,8 @@
       ? `<div class="article-body" style="font-size:1.05rem; line-height:1.75; color:#2a2118;">${bodyHtml}</div>`
       : `<div class="card" style="margin-bottom:1.5rem;">
         <div class="card-body">
-          <p style="color:var(--gray); font-size:.92rem;">Ce décryptage est en cours de rédaction et sera publié prochainement. Laissez votre e-mail pour être averti·e de sa parution.</p>
-          <a href="support-contact.html#newsletter" class="btn btn-primary mt-2">Être averti·e de la parution</a>
+          <p style="color:var(--gray); font-size:.92rem;">This analysis is being written and will be published shortly. Leave your email to be notified when it appears.</p>
+          <a href="support-contact.html#newsletter" class="btn btn-primary mt-2">Notify me on publication</a>
         </div>
       </div>`;
 
@@ -211,7 +211,7 @@
     // Bloc citation
     if (isPublished) {
       const citeYear = (article.date || "2026").match(/\d{4}/)?.[0] || "2026";
-      const citation = `${article.author}, « ${article.title} », Institut des Marges Sahariennes, ${article.date}. https://ims-advisory.afripolitique.com/article?slug=${article.slug}`;
+      const citation = `${article.author}, « ${article.title} », Institute for Saharan Margins, ${article.date}. https://ims-advisory.afripolitique.com/article?slug=${article.slug}`;
       const citeBox = document.createElement("div");
       citeBox.className = "cite-box";
       citeBox.innerHTML = `<div class="cite-label">Citer cette publication</div><p class="cite-text">${escapeHtml(citation)}</p><button type="button" class="btn btn-outline-dark" id="citeCopy" style="font-size:.8rem;padding:.4rem .9rem;">Copier la citation</button>`;
@@ -245,10 +245,10 @@
         el.innerHTML = `
           <div class="card-media"><span class="card-tag">${catLabel(n.category)}</span></div>
           <div class="card-body">
-            <div class="card-meta">${n.status === "published" && n.date ? escapeHtml(n.date) : "à paraître"}</div>
+            <div class="card-meta">${n.status === "published" && n.date ? escapeHtml(n.date) : "forthcoming"}</div>
             <h3>${escapeHtml(n.title)}</h3>
             <p>${escapeHtml(n.excerpt)}</p>
-            <span class="card-link">En savoir plus →</span>
+            <span class="card-link">Read more →</span>
           </div>`;
         relGrid.appendChild(el);
       });

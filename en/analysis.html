@@ -166,10 +166,10 @@
     el.innerHTML = `
       <div class="card-media"><span class="card-tag">${catLabel(n.category)}</span></div>
       <div class="card-body">
-        <div class="card-meta">${n.status === "published" && n.date ? escapeHtml(n.date) : "à paraître"} · ${escapeHtml(n.author)}</div>
+        <div class="card-meta">${n.status === "published" && n.date ? escapeHtml(n.date) : "forthcoming"} · ${escapeHtml(n.author)}</div>
         <h3>${escapeHtml(n.title)}</h3>
         <p>${escapeHtml(n.excerpt)}</p>
-        <span class="card-link">En savoir plus →</span>
+        <span class="card-link">Read more →</span>
       </div>`;
     return el;
   }
@@ -189,8 +189,8 @@
     filtered.forEach(n => grid.appendChild(decCard(n)));
 
     const pubCount = filtered.filter(n => n.status === "published" && n.date).length;
-    const suffix = pubCount ? (pubCount === filtered.length ? "" : " · " + (filtered.length - pubCount) + " à paraître") : " en préparation";
-    countEl.textContent = filtered.length + " décryptage" + (filtered.length !== 1 ? "s" : "") + suffix;
+    const suffix = pubCount ? (pubCount === filtered.length ? "" : " · " + (filtered.length - pubCount) + " forthcoming") : " in preparation";
+    countEl.textContent = filtered.length + " analysis piece" + (filtered.length !== 1 ? "s" : "") + suffix;
     emptyEl.style.display = filtered.length ? "none" : "block";
     grid.style.display = filtered.length ? "grid" : "none";
   }

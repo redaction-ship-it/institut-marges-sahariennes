@@ -169,7 +169,7 @@
     }));
     const decs = IMS_DATA.decryptages.map(n => ({
       type: "decryptage",
-      typeLabel: "Décryptage",
+      typeLabel: "Analysis",
       title: n.title,
       excerpt: n.excerpt,
       category: n.category,
@@ -190,7 +190,7 @@
         <div class="card-meta">${catLabel(item.category)}</div>
         <h3>${escapeHtml(item.title)}</h3>
         <p>${escapeHtml(item.excerpt)}</p>
-        <span class="card-link">En savoir plus →</span>
+        <span class="card-link">Read more →</span>
       </div>`;
     return el;
   }
@@ -207,7 +207,7 @@
     filtered.forEach(item => grid.appendChild(resultCard(item)));
 
     countEl.textContent = q
-      ? filtered.length + " résultat" + (filtered.length !== 1 ? "s" : "") + " pour « " + searchInput.value.trim() + " »"
+      ? filtered.length + " result" + (filtered.length !== 1 ? "s" : "") + " pour « " + searchInput.value.trim() + " »"
       : filtered.length + " élément" + (filtered.length !== 1 ? "s" : "") + " au total";
     emptyEl.style.display = filtered.length ? "none" : "block";
     grid.style.display = filtered.length ? "grid" : "none";
