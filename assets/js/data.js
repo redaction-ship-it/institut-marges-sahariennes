@@ -128,6 +128,8 @@ window.IMS_DATA = {
     },
     {
           "slug": "haftar-reconfiguration-sud-libyen",
+          "canonical": "https://ims-advisory.afripolitique.com/note-haftar",
+          "cover": "assets/img/haftar-sud-libyen-cover.png",
           "title": "Haftar et la reconfiguration du grand Sud libyen",
           "category": "securite",
           "type": "Note de conjoncture",
