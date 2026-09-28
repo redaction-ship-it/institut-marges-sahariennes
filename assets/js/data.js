@@ -273,7 +273,7 @@ window.IMS_DATA = {
     {
           "slug": "axes-plutot-que-camps-alliances-sahel-sahara",
           "canonical": "https://ims-advisory.afripolitique.com/note-axes-sahel-sahara",
-          "cover": "assets/img/axes-sahel-sahara-tibesti.jpg",
+          "cover": "assets/img/axes-sahel-sahara-carte-satellite.jpg",
           "title": "Des axes plutôt que des camps : la recomposition des alliances au Sahel-Sahara après la mutinerie de Niamey",
           "category": "securite",
           "status": "published",
