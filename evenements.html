@@ -33,7 +33,6 @@
     <div class="topbar-links">
       <a href="recherche.html">Rechercher</a>
       <a href="mailto:ims.advisory@afripolitique.com">ims.advisory@afripolitique.com</a>
-      <a href="tel:+33609704977">+33 6 09 70 49 77</a>
       <a href="soutien-contact.html">Soutien / Contact</a>
       <div class="lang-switch">
         <a href="evenements.html" hreflang="fr" lang="fr" title="Version française" aria-current="true"><svg viewBox="0 0 9 6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="3" height="6" fill="#002654"/><rect x="3" width="3" height="6" fill="#fff"/><rect x="6" width="3" height="6" fill="#ED2939"/></svg><span>FR</span></a>
@@ -89,21 +88,23 @@
       <h2 class="title mb-2">Aucun événement public n'est encore programmé</h2>
       <p class="lead" style="margin-bottom:1.5rem;">Le calendrier 2026-2027 est en cours de constitution. Laissez vos coordonnées pour être informé·e des prochains séminaires, restitutions et formations, ou pour proposer un sujet.</p>
 
-      <form id="interestForm" novalidate>
+      <form id="interestForm" name="evenements-ims" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="evenements-ims"/>
+        <p hidden><label>Ne pas remplir : <input name="bot-field"/></label></p>
         <div class="form-grid">
           <div class="field" data-field="name">
             <label for="evName">Nom complet</label>
-            <input type="text" id="evName" required/>
+            <input type="text" id="evName" name="name" required/>
             <div class="field-error">Merci d'indiquer votre nom.</div>
           </div>
           <div class="field" data-field="email">
             <label for="evEmail">Adresse e-mail</label>
-            <input type="email" id="evEmail" required/>
+            <input type="email" id="evEmail" name="email" required/>
             <div class="field-error">Merci d'indiquer une adresse e-mail valide.</div>
           </div>
           <div class="field">
             <label for="evFormat">Format qui vous intéresse</label>
-            <select id="evFormat">
+            <select id="evFormat" name="format">
               <option>Séminaires</option>
               <option>Restitutions</option>
               <option>Cycles de formation courts</option>
@@ -125,7 +126,7 @@
       <div class="footer-about">
         <div class="logo-text-name" style="color:#fff">Institut des Marges Sahariennes</div>
         <p>Centre de recherche indépendant sur les régimes politiques, la sécurité régionale et l'économie politique des ressources — Sahel, Lac Tchad, Sahara, Mer Rouge.</p>
-        <p style="margin-top:.5rem;"><a href="mailto:ims.advisory@afripolitique.com" style="color:inherit;text-decoration:underline;">ims.advisory@afripolitique.com</a> · +33 6 09 70 49 77</p>
+        <p style="margin-top:.5rem;"><a href="mailto:ims.advisory@afripolitique.com" style="color:inherit;text-decoration:underline;">ims.advisory@afripolitique.com</a></p>
       </div>
       <div>
         <h4>Institut</h4>
@@ -175,13 +176,11 @@
     if (!validateField(emailField, v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v))) ok = false;
     if (!ok) return;
 
-    const list = JSON.parse(localStorage.getItem("ims_event_interest") || "[]");
-    list.push({ email: qs("#evEmail").value.trim().toLowerCase(), format: qs("#evFormat").value });
-    localStorage.setItem("ims_event_interest", JSON.stringify(list));
-
-    form.reset();
-    qs("#interestSuccess").classList.add("show");
-    showToast("Votre intérêt a bien été enregistré.");
+    postFormToNetlify(form).then(() => {
+      form.reset();
+      qs("#interestSuccess").classList.add("show");
+      showToast("Votre intérêt a bien été enregistré.");
+    }).catch(() => showToast("Erreur d'envoi. Merci de réessayer dans un instant."));
   });
 </script>
 </body>
