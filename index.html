@@ -21,7 +21,7 @@
 <meta property="og:locale" content="fr_FR"/>
 <meta name="twitter:image" content="https://ims-advisory.afripolitique.com/assets/img/quadrangle-saharien-cover.png"/>
 <link rel="alternate" type="application/rss+xml" title="Institut des Marges Sahariennes — Flux RSS" href="https://ims-advisory.afripolitique.com/feed.xml"/>
-<link rel="stylesheet" href="assets/css/style.css?v=20260928b"/>
+<link rel="stylesheet" href="assets/css/style.css?v=20261029a"/>
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
 <script type="application/ld+json">
 {
@@ -112,14 +112,9 @@
           <a href="soutien-contact.html" class="btn btn-outline">Soutenir l'Institut</a>
         </div>
       </div>
-      <div class="hero-art">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#fff" stroke-width="3">
-          <circle cx="100" cy="100" r="70" stroke-opacity=".55"/>
-          <path d="M100 30 L100 170 M30 100 L170 100" stroke-opacity=".4"/>
-          <path d="M100 45 L118 95 L100 155 L82 95 Z" fill="#fff" fill-opacity=".9" stroke="none"/>
-          <circle cx="100" cy="100" r="6" fill="#17284a" stroke="none"/>
-        </svg>
-      </div>
+      <figure class="hero-art">
+        <img src="assets/img/lisieres-hero.svg" width="600" height="600" alt="Relevé des lisières : lignes de niveau qui se resserrent vers les marges, quatre blocs régionaux et quatorze points d'observation"/>
+      </figure>
     </div>
   </section>
 
@@ -151,12 +146,15 @@
     <div class="wrap">
       <span class="eyebrow">Notre mission</span>
       <h2 class="title">Un think tank indépendant sur les marges sahariennes</h2>
-      <div style="max-width:820px; display:grid; gap:1.1rem;">
+      <div class="mission-grid">
+        <div class="mission-text">
         <p class="lead">Fondé en 2026, l'Institut des Marges Sahariennes (IMS) est un think tank indépendant. Ses travaux portent sur les modèles de gouvernance, les mécanismes locaux de résolution des conflits, les dynamiques migratoires, l'intégration des nouvelles technologies, l'avenir des systèmes agro-pastoraux face à la mondialisation, les enjeux environnementaux et climatiques, la sécurité régionale et l'économie politique des ressources, avec une attention particulière portée au nexus climat-paix-sécurité.</p>
         <p class="lead">Association à but non lucratif, l'IMS produit des études stratégiques et des analyses prospectives sur quatre blocs régionaux : le Sahel, le bassin du Lac Tchad, le Sahara et la Mer Rouge. Il informe le public, forme et conseille des acteurs publics et privés, dans les milieux économiques, institutionnels et diplomatiques.</p>
         <p class="lead">Attaché à l'indépendance intellectuelle et à la rigueur analytique, l'Institut travaille avec le monde universitaire, les centres de recherche stratégique, les décideurs publics et les institutions internationales, pour éclairer, sensibiliser et anticiper les enjeux géopolitiques, économiques, climatiques et environnementaux des marges sahariennes.</p>
+        <p class="mt-2"><a href="a-propos.html" class="btn btn-outline-dark">Lire notre mission complète →</a></p>
+        </div>
+        <aside class="region-key" id="regionKey" aria-label="Blocs régionaux et pays couverts"></aside>
       </div>
-      <p class="mt-2"><a href="a-propos.html" class="btn btn-outline-dark">Lire notre mission complète →</a></p>
     </div>
   </section>
 
@@ -165,7 +163,7 @@
       <span class="eyebrow">Axes de recherche</span>
       <h2 class="title">Sept axes de recherche</h2>
       <p class="lead mb-2">Un périmètre thématique large, sur une aire géographique volontairement resserrée.</p>
-      <div class="grid grid-3" id="axesGrid"></div>
+      <div class="axes-grid" id="axesGrid"></div>
     </div>
   </section>
 
@@ -253,11 +251,25 @@
     div.innerHTML = `
       <div class="card-body">
         <h3>${cat.label}</h3>
-        <p>${count} publication${count > 1 ? "s" : ""} en préparation sur cet axe.</p>
+        <p>${count > 0 ? `${count} publication${count > 1 ? "s" : ""} en préparation sur cet axe.` : "Premiers travaux en cours de cadrage."}</p>
         <span class="card-link">Explorer →</span>
       </div>`;
     axesGrid.appendChild(div);
   });
+
+  const regionKey = qs("#regionKey");
+  if (regionKey && IMS_DATA.regions) {
+    regionKey.innerHTML = `<div class="region-key-head">Quatre blocs · quatorze pays</div>` +
+      IMS_DATA.regions.map((r, i) => `
+        <div class="region-row">
+          <span class="region-idx">${String(i + 1).padStart(2, "0")}</span>
+          <div>
+            <div class="region-name">${escapeHtml(r.label)}</div>
+            <div class="region-countries">${r.countries.map(escapeHtml).join(" · ")}</div>
+          </div>
+          <span class="region-count">${r.countries.length}</span>
+        </div>`).join("");
+  }
 
   const latestPubs = qs("#latestPubs");
   IMS_DATA.publications.slice(0,3).forEach(p => {

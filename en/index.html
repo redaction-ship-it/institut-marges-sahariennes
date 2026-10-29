@@ -21,7 +21,7 @@
 <meta property="og:locale" content="en_GB"/>
 <meta name="twitter:image" content="https://ims-advisory.afripolitique.com/assets/img/quadrangle-saharien-cover.png"/>
 <link rel="alternate" type="application/rss+xml" title="Institute for Saharan Margins — RSS feed" href="https://ims-advisory.afripolitique.com/feed.xml"/>
-<link rel="stylesheet" href="../assets/css/style.css?v=20260729b"/>
+<link rel="stylesheet" href="../assets/css/style.css?v=20261029a"/>
 <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg"/>
 <script type="application/ld+json">
 {
@@ -112,14 +112,9 @@
           <a href="support-contact.html" class="btn btn-outline">Support the Institute</a>
         </div>
       </div>
-      <div class="hero-art">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#fff" stroke-width="3">
-          <circle cx="100" cy="100" r="70" stroke-opacity=".55"/>
-          <path d="M100 30 L100 170 M30 100 L170 100" stroke-opacity=".4"/>
-          <path d="M100 45 L118 95 L100 155 L82 95 Z" fill="#fff" fill-opacity=".9" stroke="none"/>
-          <circle cx="100" cy="100" r="6" fill="#17284a" stroke="none"/>
-        </svg>
-      </div>
+      <figure class="hero-art">
+        <img src="../assets/img/lisieres-hero.svg" width="600" height="600" alt="Survey of the margins: contour lines tightening towards the edges, four regional blocs and fourteen observation points"/>
+      </figure>
     </div>
   </section>
 
@@ -151,12 +146,15 @@
     <div class="wrap">
       <span class="eyebrow">Our mission</span>
       <h2 class="title">An independent think tank on the Saharan margins</h2>
-      <div style="max-width:820px; display:grid; gap:1.1rem;">
+      <div class="mission-grid">
+        <div class="mission-text">
         <p class="lead">Founded in 2026, the Institute for Saharan Margins (IMS) is an independent think tank. Its work covers models of governance, local conflict-resolution mechanisms, migration dynamics, the uptake of new technologies, the future of agro-pastoral systems under globalisation, environmental and climate issues, regional security and the political economy of resources, with particular attention to the climate-peace-security nexus.</p>
         <p class="lead">A non-profit association, IMS produces strategic studies and foresight analysis across four regional blocs: the Sahel, the Lake Chad basin, the Sahara and the Red Sea. It informs the public, and trains and advises public and private actors in business, institutional and diplomatic circles.</p>
         <p class="lead">Committed to intellectual independence and analytical rigour, the Institute works with universities, strategic research centres, public decision-makers and international institutions, to inform, raise awareness of and anticipate the geopolitical, economic, climate and environmental challenges of the Saharan margins.</p>
+        <p class="mt-2"><a href="about.html" class="btn btn-outline-dark">Read our full mission →</a></p>
+        </div>
+        <aside class="region-key" id="regionKey" aria-label="Regional blocs and countries covered"></aside>
       </div>
-      <p class="mt-2"><a href="about.html" class="btn btn-outline-dark">Read our full mission →</a></p>
     </div>
   </section>
 
@@ -165,7 +163,7 @@
       <span class="eyebrow">Research areas</span>
       <h2 class="title">Seven research areas</h2>
       <p class="lead mb-2">A broad thematic remit over a deliberately narrow geographical area.</p>
-      <div class="grid grid-3" id="axesGrid"></div>
+      <div class="axes-grid" id="axesGrid"></div>
     </div>
   </section>
 
@@ -253,11 +251,25 @@
     div.innerHTML = `
       <div class="card-body">
         <h3>${cat.label}</h3>
-        <p>${count} publication${count > 1 ? "s" : ""} en préparation sur cet axe.</p>
-        <span class="card-link">Explorer →</span>
+        <p>${count > 0 ? `${count} publication${count > 1 ? "s" : ""} in preparation in this area.` : "First studies being scoped."}</p>
+        <span class="card-link">Explore →</span>
       </div>`;
     axesGrid.appendChild(div);
   });
+
+  const regionKey = qs("#regionKey");
+  if (regionKey && IMS_DATA.regions) {
+    regionKey.innerHTML = `<div class="region-key-head">Four blocs · fourteen countries</div>` +
+      IMS_DATA.regions.map((r, i) => `
+        <div class="region-row">
+          <span class="region-idx">${String(i + 1).padStart(2, "0")}</span>
+          <div>
+            <div class="region-name">${escapeHtml(r.label)}</div>
+            <div class="region-countries">${r.countries.map(escapeHtml).join(" · ")}</div>
+          </div>
+          <span class="region-count">${r.countries.length}</span>
+        </div>`).join("");
+  }
 
   const latestPubs = qs("#latestPubs");
   IMS_DATA.publications.slice(0,3).forEach(p => {
